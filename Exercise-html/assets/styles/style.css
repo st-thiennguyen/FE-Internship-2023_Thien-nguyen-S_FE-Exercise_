@@ -81,9 +81,19 @@ body{
   margin: 0 auto;
 }
 
+
 .banner-title{
   font-size: 72px;
   font-weight: 700;
+}
+
+.banner-action-txt{
+  color: #FFF;
+  font-size: 24px;
+  font-weight: 700;
+  text-decoration-line: underline;
+  text-transform: uppercase;
+  margin-left: 20px
 }
 
 
