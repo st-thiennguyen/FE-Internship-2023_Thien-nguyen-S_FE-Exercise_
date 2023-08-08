@@ -14,6 +14,10 @@ body {
   right: 0;
 }
 
+.section {
+  margin-bottom: 60px;
+}
+
 .navbar-item {
   display: inline;
   margin: 0 48px;
@@ -52,7 +56,7 @@ body {
   right: 0;
   left: 0;
   bottom: 0;
-  background-color: black;
+  background-color: var(--blackColor);
   opacity: 0.5;
 }
 
@@ -68,7 +72,7 @@ body {
   width: 40%;
   top: 20%;
   left: 20%;
-  color: white;
+  color: var(--whiteColor);
   margin: 0 auto;
 }
 
@@ -78,7 +82,7 @@ body {
 }
 
 .banner-action-txt {
-  color: #fff;
+  color: var(--whiteColor);
   font-size: 24px;
   font-weight: 700;
   text-decoration-line: underline;
@@ -164,7 +168,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: black;
+  background-color: var(--blackColor);
   opacity: 0.3;
 }
 
@@ -180,7 +184,7 @@ body {
 
 .category-item-title {
   margin-bottom: 15px;
-  color: #fff;
+  color: var(--whiteColor);
   font-size: 24px;
   font-weight: 400;
 }
@@ -188,7 +192,7 @@ body {
 /* PRODUCT */
 
 .section-title {
-  color: #333;
+  color: var(--darkColor);
   font-size: 32px;
   font-weight: 300;
 }
@@ -214,23 +218,23 @@ body {
 }
 
 .product-item-name {
-  color: #333;
+  color: var(--darkColor);
   font-size: 16px;
   font-weight: 300;
 }
 
 .sale-price {
-  color: #f00;
+  color: var(--redColor);
   font-size: 20px;
 }
 
 .discounted .product-price {
-  color: #cecece;
+  color: var(--greyDarkColor);
   font-size: 20px;
 }
 
 .product-price {
-  color: #333;
+  color: var(--darkColor);
   font-size: 20px;
 }
 
@@ -246,17 +250,13 @@ body {
 }
 
 .service-item-title {
-  color: #333;
+  color: var(--darkColor);
   font-size: 16px;
 }
 
 .service-item-subtitle {
-  color: #808080;
+  color: var(--greyColor);
   font-size: 14px;
-}
-
-.section-recommend {
-  margin-bottom: 60px;
 }
 
 /* Contact */
@@ -270,7 +270,7 @@ body {
 
 .section-contact::after {
   content: "";
-  background-color: #333;
+  background-color: var(--darkColor);
   opacity: 0.4;
   position: absolute;
   top: 0;
@@ -287,7 +287,7 @@ body {
 }
 
 .contact-description {
-  color: #fff;
+  color: var(--whiteColor);
   font-size: 24px;
 }
 
@@ -322,7 +322,7 @@ body {
 }
 
 .footer-top-txt {
-  color: #fff;
+  color: var(--whiteColor);
   font-size: 14px;
   margin-bottom: 60px;
 }
@@ -332,11 +332,11 @@ body {
 }
 
 .social-action {
-  color: white;
+  color: var(--whiteColor);
 }
 
 .infor-item-title {
-  color: #fff;
+  color: var(--whiteColor);
   font-size: 16px;
   font-weight: 700;
   margin-bottom: 20px;
@@ -347,18 +347,18 @@ body {
 }
 
 .subitem-item-link {
-  color: #fff;
+  color: var(--whiteColor);
   font-size: 14px;
   line-height: 150%;
 }
 
 .footer-copyright {
   height: 66px;
-  color: #fff;
+  color: var(--whiteColor);
   font-size: 12px;
   font-style: normal;
   line-height: normal;
-  border-top: 1px solid #fff;
+  border-top: 1px solid var(--whiteColor);
 }
 
 .copyright-txt {
@@ -367,5 +367,5 @@ body {
 }
 
 .org-link {
-  color: #fff;
+  color: var(--whiteColor);
 }
