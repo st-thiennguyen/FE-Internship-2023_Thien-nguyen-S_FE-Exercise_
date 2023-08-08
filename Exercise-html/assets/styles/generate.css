@@ -1,0 +1,113 @@
+:root{
+    --primaryColor : #FBB03B;
+    --greyLightColor : #F6F6F6;
+    --whiteColor : #fff;
+    --greyColor : #A8A8A8;
+    --textColor : #333;
+}
+
+a{
+  text-decoration: none;
+}
+
+li{
+  list-style-type: none;
+}
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  .flex{
+    display: flex;
+  }
+
+  .gap-10{
+    gap:10px;
+  }
+
+  .flex-column{
+    flex-direction: column;
+  }
+
+  .justify-start{
+    justify-content: flex-start;
+  }
+
+  .justify-between{
+    justify-content: space-between;
+  }
+
+  .justify-end{
+    justify-content: flex-end;
+  }
+
+  .justify-center{
+    justify-content: center;
+  }
+
+  .item-center{
+    align-items: center;
+  }
+
+  .text-center{
+    text-align: center;
+  }
+
+  .flex-wrap{
+    flex-wrap: wrap;
+  }
+
+  /* Container for rows and columns */
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  /* Flexbox row */
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  /* Flexbox column */
+  .col {
+    padding: 10px; /* Adjust as needed */
+  }
+
+  /* Column classes */
+  .col-1 { flex: 0 0 8.333333%; }
+  .col-2 { flex: 0 0 16.666667%; }
+  .col-3 { flex: 0 0 25%; }
+  .col-4 { flex: 0 0 33.333333%; }
+  .col-5 { flex: 0 0 41.666667%; }
+  .col-6 { flex: 0 0 50%; }
+  .col-7 { flex: 0 0 58.333333%; }
+  .col-8 { flex: 0 0 66.666667%; }
+  .col-9 { flex: 0 0 75%; }
+  .col-10 { flex: 0 0 83.333333%; }
+  .col-11 { flex: 0 0 91.666667%; }
+  .col-12 { flex: 0 0 100%; }
+
+  .text-yellow{
+    color: var(--primaryColor);
+  }
+
+  .btn{
+    text-transform: uppercase;
+    padding: 14px 18px;
+    color: #333;
+    background-color: var(--whiteColor);
+    border-radius: 33.33px;
+    font-size: 13px;
+    font-weight: 700;
+    width: fit-content;
+  }
+
+  .btn-rounded{
+    border: 1px solid #C4C4C4;
+  }

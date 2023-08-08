@@ -6,16 +6,18 @@
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <link rel="stylesheet" href="assets/styles/style.css" />
+    <link rel="stylesheet" href="assets/styles/generate.css" />
     <title>E shop - Best clothing in the world</title>
   </head>
   <body>
     <header id="header" class="header">
-      <div class="container">
+      <div class="container header-wrapper">
         <div class="header-logo">
           <h1 class="logo-heading">
             <a href="#" class="header-logo-link">
               <img
-                src="assets/images/logo.png"
+                src="assets/images/ic-logo.svg"
                 alt="Logo E shop"
                 class="logo-img" />
             </a>
@@ -24,13 +26,13 @@
         <nav class="header-navbar">
           <ul class="navbar-list">
             <li class="navbar-item">
-              <a class="navbar-item-link" href="">Men</a>
+              <a class="navbar-item-link text-yellow" href="">Men</a>
             </li>
             <li class="navbar-item">
-              <a class="navbar-item-link" href="">Women</a>
+              <a class="navbar-item-link text-yellow" href="">Women</a>
             </li>
             <li class="navbar-item">
-              <a class="navbar-item-link" href="">Kids</a>
+              <a class="navbar-item-link text-yellow" href="">Kids</a>
             </li>
           </ul>
         </nav>
@@ -38,18 +40,18 @@
           <ul class="icon-list">
             <li class="icon-item">
               <a class="icon-item-link" href=""
-                ><i class="fa-solid fa-magnifying-glass"></i
-              ></a>
+                ><img src="assets/images/icon-search.svg" alt=""
+              /></a>
             </li>
             <li class="icon-item">
               <a class="icon-item-link" href=""
-                ><i class="fa-solid fa-cart-shopping"></i
-              ></a>
+                ><img src="assets/images/icon-cart.svg" alt=""
+              /></a>
             </li>
             <li class="icon-item">
               <a class="icon-item-link" href=""
-                ><i class="fa-regular fa-user"></i
-              ></a>
+                ><img src="assets/images/icon-user.svg" alt=""
+              /></a>
             </li>
           </ul>
         </div>
@@ -57,10 +59,10 @@
     </header>
     <main id="main" class="main">
       <section class="section section-banner">
-        <div class="banner-wrapper">
+        <div class="banner-wrapper container">
           <div class="banner-content">
             <h2 class="banner-title">
-              Sale of the <span class="yellow-text">summer</span> collection
+              Sale of the <span class="text-yellow">summer</span> collection
             </h2>
             <a href="#" class="banner-action">
               <img
@@ -70,9 +72,9 @@
             </a>
           </div>
           <div class="banner-statitics">
-            <ul class="statitic-list">
+            <ul class="statitic-list flex">
               <li class="statitic-item">
-                <i class="statitic-icon icon fa-solid fa-truck"></i>
+                <i class="statitic-icon icon icon-truck-yellow"></i>
                 <div class="statistic-content">
                   <h4 class="statistic-title">Free Shipping</h4>
                   <p class="statistic-description">On purchases over $199</p>
@@ -80,7 +82,7 @@
               </li>
 
               <li class="statitic-item">
-                <i class="statitic-icon icon fa-regular fa-face-smile"></i>
+                <i class="statitic-icon icon icon-dollar-yellow"></i>
                 <div class="statistic-content">
                   <h4 class="statistic-title">99% Satisfied Customers</h4>
                   <p class="statistic-description">
@@ -90,7 +92,7 @@
               </li>
 
               <li class="statitic-item">
-                <i class="statitic-icon icon fa-solid fa-dollar-sign"></i>
+                <i class="statitic-icon icon icon-smile-yellow"></i>
                 <div class="statistic-content">
                   <h4 class="statistic-title">Originality Guaranteed</h4>
                   <p class="statistic-description">
@@ -104,62 +106,70 @@
       </section>
       <section class="section section-categories">
         <div class="container">
-          <ul class="category-list">
-            <li class="card category-item card-large">
+          <ul class="category-list flex gap-10">
+            <li class="card category-item card-large col-6">
               <div class="category-item-img">
                 <img
                   src="assets/images/category-01.png"
                   alt="Image of category New arrivalsare" />
+                <div class="category-item-content flex flex-column justify-end">
+                  <h4 class="category-item-title">New arrivalsare now in!</h4>
+                  <a href="#" class="category-item-action btn btn-primary"
+                    >Show collection</a
+                  >
+                </div>
               </div>
-              <h4 class="category-item-title">New arrivalsare now in!</h4>
-              <a href="#" class="category-item-action btn-primary"
-                >Show collection</a
-              >
             </li>
 
-            <li class="card category-item">
+            <li class="card category-item col-3">
               <div class="category-item-img">
                 <img
                   src="assets/images/category-02.png"
                   alt="Image of category Basic t-shirts" />
+                <div class="category-item-content flex flex-column justify-end">
+                  <h4 class="category-item-title">Basic t-shirts $29,99</h4>
+                  <a href="#" class="category-item-action btn btn-primary"
+                    >MORE DETAILS</a
+                  >
+                </div>
               </div>
-              <h4 class="category-item-title">Basic t-shirts $29,99</h4>
-              <a href="#" class="category-item-action btn-primary"
-                >MORE DETAILS</a
-              >
             </li>
 
-            <li class="card category-item">
+            <li class="card category-item col-3">
               <div class="category-item-img">
                 <img
                   src="assets/images/category-03.png"
                   alt="Image of category Sale this summer" />
+                <div class="category-item-content flex flex-column justify-end">
+                  <span class="sale-rate">- 50%</span>
+                  <h4 class="category-item-title">Sale this summer</h4>
+                  <a href="#" class="category-item-action btn btn-primary"
+                    >VIEW ALL</a
+                  >
+                </div>
               </div>
-              <span class="sale-rate">- 50%</span>
-              <h4 class="category-item-title">Sale this summer</h4>
-              <a href="#" class="category-item-action btn-primary">VIEW ALL</a>
             </li>
           </ul>
         </div>
       </section>
       <section class="section section-bestseller">
         <div class="container container-bestseller">
-          <div class="bestseller-header">
+          <div class="bestseller-header flex justify-between">
             <h3 class="section-title">Selected just for you</h3>
-            <a href="#" class="bestseller-action btn-primary">SHOW MORE</a>
+            <a href="#" class="bestseller-action btn btn-rounded">SHOW MORE</a>
           </div>
-          <ul class="product-list">
+          <ul class="product-list row gap-10">
             <li class="product-item">
               <a href="#" class="product-action discounted">
                 <div class="product-item-image">
                   <img
                     src="assets/images/product-01.png"
                     alt="image of T-Shirt Summer Vibes product" />
-                  <span class="sale-rate">-30%</span>
+                  <span class="sale-product sale-rate">-30%</span>
                 </div>
                 <div class="product-item-info">
                   <h4 class="product-item-name">T-Shirt Summer Vibes</h4>
-                  <div class="product-item-price">
+                  <div class="product-item-price flex justify-between">
                     <span class="sale-price">$89.99 </span>
                     <span class="product-price">$119.99 </span>
                   </div>
@@ -220,12 +230,12 @@
             <h3 class="section-title">Why should you choose us?</h3>
           </div>
 
-          <ul class="services-list">
+          <ul class="services-list flex justify-between">
             <li class="service-item">
               <a href="#" class="service-item-action">
                 <div class="service-item-image">
                   <img
-                    src="assets/images/icon-truck.svg"
+                    src="assets/images/ic-truck2.svg"
                     alt="Image icon of Free Shipping service" />
                 </div>
                 <h4 class="service-item-title">Free Shipping</h4>
@@ -239,7 +249,7 @@
               <a href="#" class="service-item-action service-active">
                 <div class="service-item-image">
                   <img
-                    src="assets/images/icon-payment.svg"
+                    src="assets/images/ic-hand2.svg"
                     alt="Image icon of Easy Payments service" />
                 </div>
                 <h4 class="service-item-title">Easy Payments</h4>
@@ -281,20 +291,20 @@
       <section class="section section-recommend">
         <div class="container">
           <div class="recommend-header">
-            <h3 class="section-title">Products in today</h3>
+            <h3 class="section-title text-center">Products in today</h3>
           </div>
-          <ul class="product-list">
+          <ul class="product-list row gap-10">
             <li class="product-item">
-              <a href="#" class="product-action">
+              <a href="#" class="product-action discounted">
                 <div class="product-item-image">
                   <img
                     src="assets/images/product-01.png"
                     alt="image of T-Shirt Summer Vibes product" />
-                  <span class="sale-rate">-30%</span>
+                  <span class="sale-product sale-rate">-30%</span>
                 </div>
                 <div class="product-item-info">
                   <h4 class="product-item-name">T-Shirt Summer Vibes</h4>
-                  <div class="product-item-price discounted">
+                  <div class="product-item-price flex justify-between">
                     <span class="sale-price">$89.99 </span>
                     <span class="product-price">$119.99 </span>
                   </div>
@@ -350,30 +360,31 @@
         </div>
       </section>
       <section class="section section-contact">
-        <div class="contact-wrapper">
-          <div class="contact-description">
+        <div class="container contact-wrapper flex justify-between item-center">
+          <div class="contact-description col-6">
             <p class="contact-txt">
-              Subscribe to our newsletter andreceive exclusive offers every
-              weekSubscribe to our newsletter andreceive exclusive offers every
-              week
+              Subscribe to our newsletter andreceive exclusive offers every week
             </p>
           </div>
-          <div class="contact-form">
-            <form action="#" class="form-contact">
+          <div class="contact-form col-6">
+            <form action="#" class="form-contact flex">
               <input
                 type="email"
-                class="form-contact-input"
+                class="form-contact-input col-8"
                 placeholder="Enter your email"
                 required />
-              <button class="btn-primary btn-yellow">SUBSCRIBE</button>
+              <input
+                class="btn btn-primary sub-btn btn-yellow"
+                type="submit"
+                value="SUBSCRIBE" />
             </form>
           </div>
         </div>
       </section>
     </main>
     <footer id="footer" class="footer">
-      <div class="container">
-        <div class="footer-top">
+      <div class="container footer-wrapper flex justify-between">
+        <div class="footer-top col-4">
           <div class="footer-top-logo">
             <h2 class="footer-top-heading">
               <a href="" class="footer-logo-link">
@@ -385,7 +396,7 @@
             House My Brand designs clothing for the young, the old &everyone in
             between – but most importantly, for the fashionable
           </p>
-          <ul class="social-list">
+          <ul class="social-list flex">
             <li class="social-item">
               <a href="#" class="social-action"
                 ><i class="fa-brands fa-facebook-f"></i
@@ -413,8 +424,8 @@
             </li>
           </ul>
         </div>
-        <div class="footer-infor">
-          <ul class="infor-shop-list">
+        <div class="footer-infor col-7">
+          <ul class="infor-shop-list flex justify-between">
             <li class="infor-shop-item">
               <div class="infor-item-wrapper">
                 <p class="infor-item-title">Shopping online</p>
@@ -479,7 +490,7 @@
           </ul>
         </div>
       </div>
-      <div class="footer-copyright">
+      <div class="footer-copyright flex item-center">
         <p class="copyright-txt">
           DESIGN BY <a href="#" class="org-link">ICEO.CO</a> - © 2019. ALL
           RIGHTS RESERVED.
