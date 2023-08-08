@@ -25,12 +25,9 @@ li{
     display: flex;
   }
 
-  .gap-10{
-    gap:10px;
-  }
-
   .col{
     padding: 0 5px;
+    margin: -10px;
   }
 
   .flex-column{
