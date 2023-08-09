@@ -1,0 +1,135 @@
+@media screen and (max-width: 640px) {
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -4px;
+  }
+
+  .col {
+    padding: 4px;
+  }
+
+  .col-sm-1 {
+    width: 8.33%;
+  }
+
+  .col-sm-2 {
+    width: 16.66%;
+  }
+
+  .col-sm-3 {
+    width: 25%;
+  }
+
+  .col-sm-4 {
+    width: 33.33%;
+  }
+
+  .col-sm-5 {
+    width: 41.66%;
+  }
+
+  .col-sm-6 {
+    width: 50%;
+  }
+
+  .col-sm-7 {
+    width: 58.33%;
+  }
+
+  .col-sm-8 {
+    width: 66.66%;
+  }
+
+  .col-sm-9 {
+    width: 75%;
+  }
+
+  .col-sm-10 {
+    width: 83.33%;
+  }
+
+  .col-sm-11 {
+    width: 91.66%;
+  }
+
+  .col-sm-12 {
+    width: 100%;
+  }
+
+  .container {
+    max-width: calc(100vw-48px);
+  }
+
+  .section,
+  .footer {
+    padding: 24px;
+  }
+
+  .section-banner {
+    background-image: url("../images/banner-mobile-bg.png");
+  }
+
+  .banner-wrapper .banner-content {
+    left: calc((100vw - (100vw - 48px)) / 2);
+    width: 80%;
+  }
+
+  .banner-title {
+    font-size: 48px;
+  }
+
+  .banner-wrapper .banner-statitics {
+    display: none;
+  }
+
+  .category-item-content {
+    padding: 16px;
+  }
+
+  .category-item-title {
+    font-size: 14px;
+    margin-bottom: 11px;
+  }
+
+  .btn {
+    font-size: 10px;
+    padding: 3px 10px;
+  }
+
+  .bagde {
+    font-size: 8px;
+    border-radius: 9px;
+    padding: 2px 5px;
+  }
+
+  .section-title {
+    font-size: 18px;
+    margin-bottom: 16px;
+  }
+
+  .product-item-name {
+    font-size: 12px;
+  }
+
+  .sale-price {
+    font-size: 10px;
+  }
+
+  .discounted .product-price {
+    font-size: 10px;
+  }
+
+  .product-price {
+    font-size: 10px;
+  }
+
+  .service-item-title {
+    margin: 8px 0;
+  }
+
+  .service-item-action {
+    display: flex;
+    align-items: center;
+  }
+}

@@ -1,0 +1,37 @@
+/* HEADER */
+
+#header {
+  position: fixed;
+  z-index: 9;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.header-desktop {
+  margin-top: 48px;
+}
+
+.navbar-item {
+  margin: 0 48px;
+}
+
+.icon-item {
+  margin: 0 12px;
+}
+
+.icon-item:last-child {
+  margin-right: 0px;
+}
+
+.navbar-item-link {
+  color: var(--primaryColor);
+  font-size: 18px;
+  font-weight: 700;
+}
+
+@media screen and (max-width: 680px) {
+  .header-desktop {
+    display: none;
+  }
+}
