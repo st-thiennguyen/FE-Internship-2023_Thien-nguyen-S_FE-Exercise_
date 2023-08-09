@@ -167,9 +167,9 @@
 
   .sub-btn {
     padding: 7px 20px;
-    color: var(--darkColor);
     margin-top: 16px;
-    font-weight: bold;
+    font-weight: 700;
+    font-size: 13px;
   }
 
   .social-list {
