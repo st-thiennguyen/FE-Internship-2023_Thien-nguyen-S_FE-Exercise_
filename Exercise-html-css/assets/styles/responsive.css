@@ -190,4 +190,8 @@
     min-width: calc(100vw - 48px);
     margin: 0;
   }
+
+  .btn-mb-none-ouline {
+    border: none;
+  }
 }
