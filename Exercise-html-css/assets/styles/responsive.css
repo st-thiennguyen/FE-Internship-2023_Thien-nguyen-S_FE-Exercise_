@@ -61,6 +61,11 @@
     max-width: calc(100vw - 48px);
   }
 
+  .section,
+  .footer-wrapper {
+    padding: 24px 0;
+  }
+
   .section-banner {
     background-image: url("../images/banner-mobile-bg.png");
   }
@@ -75,7 +80,7 @@
 
   .header-mobile {
     display: flex;
-    padding: 20px 24px;
+    padding: 20px 0;
   }
 
   .header-mobile-logo img {
