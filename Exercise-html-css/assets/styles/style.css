@@ -238,6 +238,7 @@ body {
 }
 
 .sub-btn {
+  color: var(--darkColor) !important;
   border: none;
   outline: none;
 }
@@ -257,7 +258,12 @@ body {
   text-align: end;
 }
 
+.form-contact {
+  float: right;
+}
+
 .form-contact-input {
+  min-width: 350px;
   padding: 14px 24px;
   border-radius: 60px;
   outline: none;

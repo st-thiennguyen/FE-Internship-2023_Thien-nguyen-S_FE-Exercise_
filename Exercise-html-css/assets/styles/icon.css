@@ -52,3 +52,15 @@
 .service-item:hover .icon-quality-service {
   background-image: url("../images/ic-quality-hl.svg");
 }
+
+.icon-cart-mb {
+  background-image: url("../images/ic-cart-mb.svg");
+}
+
+.icon-user-mb {
+  background-image: url("../images/ic-user-mb.svg");
+}
+
+.icon-menu-mb {
+  background-image: url("../images/ic-menu-mb.svg");
+}
