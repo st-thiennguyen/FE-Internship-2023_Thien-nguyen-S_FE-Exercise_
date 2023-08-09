@@ -15,16 +15,18 @@ body {
 }
 
 .section {
-  margin-bottom: 60px;
+  padding: 48px 0;
+}
+
+.header-wrapper {
+  margin-top: 48px;
 }
 
 .navbar-item {
-  display: inline;
   margin: 0 48px;
 }
 
 .icon-item {
-  display: inline;
   margin: 0 12px;
 }
 
@@ -40,7 +42,6 @@ body {
 
 /* BANNER SECTION */
 .section-banner {
-  width: 100%;
   height: 100vh;
   background-image: url("../images/banner-bg.png");
   background-size: cover;
@@ -70,8 +71,9 @@ body {
   z-index: 1;
   position: absolute;
   width: 40%;
-  top: 20%;
-  left: 20%;
+  top: 50%;
+  transform: translateY(-50%);
+  left: calc((100vw - 1152px) / 2 + 96px);
   color: var(--whiteColor);
   margin: 0 auto;
 }
@@ -97,24 +99,32 @@ body {
   z-index: 1;
   background-color: var(--whiteColor);
   margin: 0 auto;
-  padding: 24px 10% 24px 20%;
+  padding: 14px 0 14px calc((100vw - 1152px) / 2 + 96px);
   border-radius: 0 70px 0 0;
   border-bottom: 1px solid var(--greyLightColor);
 }
 
 .statitic-item {
-  display: flex;
   align-items: start;
-  margin-right: 48px;
+  padding: 24px;
+}
+
+.statitic-item:first-child {
+  align-items: start;
+  padding-left: 0;
 }
 
 .statitic-item:last-child {
-  margin-right: 0;
+  padding-right: 88px;
 }
 
 .statistic-title {
   font-size: 14px;
   font-weight: 700;
+}
+
+.statistic-content {
+  max-width: 200px;
 }
 
 .statistic-description {
@@ -123,8 +133,7 @@ body {
 }
 
 .icon {
-  margin-right: 10px;
-  display: inline;
+  display: inline-block;
   width: 40px;
   height: 40px;
   background-repeat: no-repeat;
@@ -132,23 +141,44 @@ body {
 }
 
 .icon-truck-yellow {
+  margin-right: 10px;
   background-image: url("../images/ic-truck-yellow.svg");
 }
 
 .icon-dollar-yellow {
+  margin-right: 10px;
   background-image: url("../images/ic-dollar-yellow.svg");
 }
 
 .icon-smile-yellow {
+  margin-right: 10px;
   background-image: url("../images/ic-smile-yellow.svg");
 }
 
-/* CATEGORY */
-
-.category-list {
-  width: 100%;
+.icon-truck-service {
+  background-image: url("../images/ic-truck.svg");
 }
 
+.icon-payment-service {
+  background-image: url("../images/ic-payment.svg");
+}
+
+.icon-guarantee-service {
+  background-image: url("../images/ic-guarantee.svg");
+}
+
+.icon-quality-service {
+  background-image: url("../images/ic-quality.svg");
+}
+
+.service-item-image {
+  width: 68px;
+  height: 68px;
+  background-color: var(--whiteColor);
+  border-radius: 10px;
+}
+
+/* CATEGORY */
 .category-item-img {
   position: relative;
   width: 100%;
@@ -190,15 +220,15 @@ body {
 }
 
 /* PRODUCT */
+.section-title-center {
+  text-align: center;
+}
 
 .section-title {
   color: var(--darkColor);
   font-size: 32px;
   font-weight: 300;
-}
-
-.product-list {
-  margin-top: 40px;
+  margin-bottom: 40px;
 }
 
 .product-item-image {
@@ -243,15 +273,32 @@ body {
   background-color: var(--greyLightColor);
 }
 
-.services-header {
-  width: 100%;
-  text-align: center;
-  margin-bottom: 50px;
+.service-item:hover .service-item-title,
+.service-item:hover .service-item-subtitle {
+  color: var(--primaryColor);
+}
+
+.service-item:hover .icon-truck-service {
+  background-image: url("../images/ic-truck-hl.svg");
+}
+
+.service-item:hover .icon-payment-service {
+  background-image: url("../images/ic-payment-hl.svg");
+}
+
+.service-item:hover .icon-guarantee-service {
+  background-image: url("../images/ic-guarantee-yellow.svg");
+}
+
+.service-item:hover .icon-quality-service {
+  background-image: url("../images/ic-quality-hl.svg");
 }
 
 .service-item-title {
   color: var(--darkColor);
   font-size: 16px;
+  margin-top: 46px;
+  margin-bottom: 16px;
 }
 
 .service-item-subtitle {
@@ -282,7 +329,7 @@ body {
 
 .contact-wrapper {
   position: relative;
-  padding: 85px 20px !important;
+  padding: 37px 0 !important;
   z-index: 2;
 }
 
@@ -325,6 +372,7 @@ body {
   color: var(--whiteColor);
   font-size: 14px;
   margin-bottom: 60px;
+  max-width: 500px;
 }
 
 .social-item {
@@ -353,11 +401,9 @@ body {
 }
 
 .footer-copyright {
-  height: 66px;
+  padding: 24px;
   color: var(--whiteColor);
   font-size: 12px;
-  font-style: normal;
-  line-height: normal;
   border-top: 1px solid var(--whiteColor);
 }
 

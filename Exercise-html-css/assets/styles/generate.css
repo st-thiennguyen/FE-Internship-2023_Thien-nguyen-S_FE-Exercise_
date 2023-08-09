@@ -27,13 +27,17 @@ li {
   padding: 0;
 }
 
-.flex {
+.container {
+  max-width: 1152px;
+  margin: 0 auto;
+}
+
+.d-flex {
   display: flex;
 }
 
 .col {
   padding: 0 5px;
-  margin: -10px;
 }
 
 .flex-column {
@@ -68,22 +72,14 @@ li {
   flex-wrap: wrap;
 }
 
-/* Container for rows and columns */
-.container {
-  max-width: 1152px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-/* Flexbox row */
 .row {
   display: flex;
   flex-wrap: wrap;
+  margin: 0 -10px;
 }
 
-/* Flexbox column */
 .col {
-  padding: 10px; /* Adjust as needed */
+  padding: 0 10px;
 }
 
 .col-1 {
@@ -142,11 +138,17 @@ li {
   border-radius: 33.33px;
   font-size: 13px;
   font-weight: 700;
+  height: fit-content;
   width: fit-content;
 }
 
 .btn-rounded {
   border: 1px solid;
+}
+
+.btn-primary {
+  background-color: var(--primaryColor);
+  color: var(--whiteColor);
 }
 
 .bagde {
@@ -161,4 +163,36 @@ li {
 .bagde-red {
   background: var(--redColor);
   color: var(--whiteColor);
+}
+
+.d-block {
+  display: block;
+}
+
+.d-inline {
+  display: inline;
+}
+
+.d-inline-block {
+  display: inline-block;
+}
+
+.d-hidden {
+  display: none;
+}
+
+.d-inline-flex {
+  display: inline-flex;
+}
+
+.d-table {
+  display: table;
+}
+
+.d-table-row {
+  display: table-row;
+}
+
+.d-table-cell {
+  display: table-cell;
 }
