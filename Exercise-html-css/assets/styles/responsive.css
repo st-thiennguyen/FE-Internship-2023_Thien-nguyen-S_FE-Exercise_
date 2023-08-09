@@ -58,14 +58,7 @@
   }
 
   .container {
-    max-width: calc(100vw-48px);
-  }
-
-  .section {
-    padding: 24px;
-  }
-  .footer {
-    padding: 0 24px;
+    max-width: calc(100vw - 48px);
   }
 
   .section-banner {
@@ -76,10 +69,13 @@
     background-image: url("../images/footer-mobile-bg.png");
   }
 
+  #header {
+    background-color: var(--whiteColor);
+  }
+
   .header-mobile {
     display: flex;
     padding: 20px 24px;
-    background-color: var(--whiteColor);
   }
 
   .header-mobile-logo img {
@@ -178,5 +174,15 @@
 
   .social-list {
     display: none;
+  }
+
+  .form-contact {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .form-contact-input {
+    min-width: calc(100vw - 48px);
+    margin: 0;
   }
 }
