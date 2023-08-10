@@ -17,10 +17,6 @@
   .col-#{$i} {
     width: percentage(calc($i / 12));
   }
-
-  .col-sm-#{$i} {
-    width: percentage(calc($i / 12));
-  }
 }
 
 .d-flex {
@@ -86,5 +82,11 @@
 @media screen and (max-width: map-get($breakpoints, md)) {
   .container {
     max-width: calc(100vw - 48px);
+  }
+
+  @for $i from 1 through 12 {
+    .col-sm-#{$i} {
+      width: percentage(calc($i / 12));
+    }
   }
 }
