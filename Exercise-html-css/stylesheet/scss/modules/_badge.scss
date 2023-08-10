@@ -1,0 +1,21 @@
+.bagde {
+  border-radius: 20px;
+  width: fit-content;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 6px 10px;
+  text-align: center;
+}
+
+.bagde-red {
+  background: map-get($color, redColor);
+  color: map-get($color, whiteColor);
+}
+
+@media screen and (max-width: map-get($breakpoints, md)) {
+  .bagde {
+    font-size: 8px;
+    border-radius: 9px;
+    padding: 2px 5px;
+  }
+}

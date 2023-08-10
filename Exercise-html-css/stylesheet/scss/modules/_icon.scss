@@ -4,6 +4,9 @@
   height: $icon-size;
   background-repeat: no-repeat;
   background-position: center;
+  &-search {
+    background-image: map-get($icons, search-b);
+  }
   &-truck-yellow {
     margin-right: 10px;
     background-image: map-get($icons, truck-y);
@@ -46,22 +49,17 @@
   }
 }
 
-.icon-truck-black {
-  background-image: map-get($icons, search-w);
-}
-
-.service-item:hover .icon-truck-service {
-  background-image: url("../../../assets/images/ic-truck-hl.svg");
-}
-
-.service-item:hover .icon-payment-service {
-  background-image: url("../../../assets/images/ic-payment-hl.svg");
-}
-
-.service-item:hover .icon-guarantee-service {
-  background-image: url("../../../assets/images/ic-guarantee-yellow.svg");
-}
-
-.service-item:hover .icon-quality-service {
-  background-image: url("../../../assets/images/ic-quality-hl.svg");
+.service-item:hover {
+  .icon-truck-service {
+    background-image: map-get($icons, truck-y);
+  }
+  .icon-payment-service {
+    background-image: map-get($icons, payment-y);
+  }
+  .icon-guarantee-service {
+    background-image: map-get($icons, guarantee-y);
+  }
+  .icon-quality-service {
+    background-image: map-get($icons, quality-y);
+  }
 }

@@ -1,0 +1,68 @@
+/* FOOTER */
+.footer {
+  background-color: map-get($color, primaryColor);
+  .footer-wrapper {
+    padding: 45px 0 60px 0;
+    .footer-top-logo {
+      margin-bottom: 24px;
+    }
+    .footer-top-txt {
+      color: map-get($color, whiteColor);
+      font-size: 14px;
+      margin-bottom: 60px;
+      max-width: 500px;
+    }
+    .social-item {
+      margin-right: 20px;
+    }
+
+    .social-action {
+      color: map-get($color, whiteColor);
+    }
+
+    .infor-item-title {
+      color: map-get($color, whiteColor);
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    .subitem-item {
+      margin-bottom: 18px;
+    }
+
+    .subitem-item-link {
+      color: map-get($color, whiteColor);
+      font-size: 14px;
+    }
+  }
+  .footer-copyright {
+    padding: 24px;
+    color: map-get($color, whiteColor);
+    font-size: 12px;
+    border-top: 1px solid map-get($color, whiteColor);
+  }
+
+  .copyright-txt {
+    width: 100%;
+    text-align: center;
+  }
+
+  .org-link {
+    color: map-get($color, whiteColor);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .footer-wrapper {
+    padding: 24px 0;
+  }
+
+  .social-list {
+    display: none;
+  }
+
+  .subitem-item-link {
+    font-size: 12px;
+  }
+}

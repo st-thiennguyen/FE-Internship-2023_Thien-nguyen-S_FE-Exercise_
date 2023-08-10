@@ -3,24 +3,20 @@
   margin: 0 auto;
 }
 
-.row {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 0 $p-col;
-}
-
-.col {
-  padding: 0 $p-col;
-}
-
-@for $i from 1 through 12 {
-  .col-#{$i} {
-    width: percentage(calc($i / 12));
-  }
-}
-
 .d-flex {
   display: flex;
+}
+
+.item-center {
+  align-items: center;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
 }
 
 .flex-column {
@@ -79,9 +75,33 @@
   display: table-cell;
 }
 
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 calc(0px - $p-col);
+}
+
+.col {
+  padding: 0 $p-col;
+}
+
+@for $i from 1 through 12 {
+  .col-#{$i} {
+    width: percentage(calc($i / 12));
+  }
+}
+
 @media screen and (max-width: map-get($breakpoints, md)) {
   .container {
     max-width: calc(100vw - 48px);
+  }
+
+  .row {
+    margin: calc(0px - $p-col-sm);
+  }
+
+  .col {
+    padding: $p-col-sm;
   }
 
   @for $i from 1 through 12 {

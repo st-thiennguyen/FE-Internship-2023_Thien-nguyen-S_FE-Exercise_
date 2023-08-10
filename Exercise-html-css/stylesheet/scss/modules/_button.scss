@@ -1,0 +1,45 @@
+.btn {
+  text-transform: uppercase;
+  padding: 14px 18px;
+  color: map-get($color, darkColor);
+  background-color: map-get($color, whiteColor);
+  border-radius: 33.33px;
+  font-size: 13px;
+  font-weight: 700;
+  height: fit-content;
+  width: fit-content;
+  cursor: pointer;
+}
+
+.btn-rounded {
+  border: 1px solid;
+}
+
+.btn-primary {
+  background-color: map-get($color, primaryColor);
+  color: map-get($color, whiteColor);
+}
+
+.btn-subcribe {
+  color: map-get($color, darkColor);
+  border: none;
+  outline: none;
+}
+
+@media screen and (max-width: map-get($breakpoints, md)) {
+  .btn {
+    font-size: 10px;
+    padding: 3px 10px;
+  }
+
+  .btn-subcribe {
+    padding: 7px 20px;
+    margin-top: 16px;
+    font-weight: 700;
+    font-size: 13px;
+  }
+
+  .btn-mb-none-ouline {
+    border: none;
+  }
+}

@@ -1,5 +1,4 @@
-@media screen and (max-width: 768px) {
-  /* ok */
+/* @media screen and (max-width: 768px) {
   .row {
     margin: -4px;
   }
@@ -55,7 +54,6 @@
   .col-sm-12 {
     width: 100%;
   }
-  /* ok */
   .container {
     max-width: calc(100vw - 48px);
   }
@@ -81,4 +79,4 @@
     border-radius: 9px;
     padding: 2px 5px;
   }
-}
+} */

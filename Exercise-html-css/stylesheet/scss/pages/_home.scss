@@ -37,7 +37,7 @@
       font-size: 72px;
       font-weight: 700;
     }
-    &-action {
+    &-action-txt {
       color: map-get($color, whiteColor);
       font-size: 24px;
       font-weight: 700;
@@ -85,6 +85,48 @@
   }
 }
 
+.category-item {
+  &-img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &-content {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 2;
+    padding: 50px 40px;
+  }
+  &-title {
+    margin-bottom: 15px;
+    color: map-get($color, whiteColor);
+    font-size: 24px;
+    font-weight: 400;
+  }
+
+  &-img::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: map-get($color, blackColor);
+    opacity: 0.3;
+  }
+}
+
+/* CATEGORY */
+
 /* PRODUCT */
 .product-item {
   &-image {
@@ -122,23 +164,200 @@
 /* Services */
 .section-services {
   background-color: var(--greyLightColor);
+  .service-item {
+    &-title {
+      color: map-get($color, darkColor);
+      font-size: 16px;
+      margin-top: 46px;
+      margin-bottom: 16px;
+    }
+    &-subtitle {
+      color: map-get($color, greyColor);
+      font-size: 14px;
+    }
+    &-image {
+      width: 68px;
+      height: 68px;
+      background-color: map-get($color, whiteColor);
+      border-radius: 10px;
+    }
+    &:hover .service-item-title,
+    &:hover .service-item-subtitle {
+      color: map-get($color, primaryColor);
+    }
+  }
 }
 
-.service-item {
-  &-title {
-    color: map-get($color, darkColor);
-    font-size: 16px;
-    margin-top: 46px;
-    margin-bottom: 16px;
+/* Contact */
+.section-contact {
+  background-image: map-get($image, footer-bg);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  z-index: 0;
+
+  &::after {
+    content: "";
+    background-color: var(--darkColor);
+    opacity: 0.4;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 0;
   }
-  &-subtitle {
-    color: map-get($color, greyColor);
-    font-size: 14px;
-  }
-  &-image {
-    width: 68px;
-    height: 68px;
-    background-color: map-get($color, whiteColor);
-    border-radius: 10px;
+
+  .contact-wrapper {
+    position: relative;
+    padding: 37px 0;
+    z-index: 2;
+
+    .contact-description {
+      color: map-get($color, whiteColor);
+      font-size: 24px;
+    }
+
+    .contact-form {
+      text-align: end;
+      .form-contact {
+        float: right;
+      }
+    }
+
+    .form-contact-input {
+      min-width: 350px;
+      padding: 14px 24px;
+      border-radius: 60px;
+      outline: none;
+      border: none;
+      margin-right: 40px;
+    }
   }
 }
+
+.btn-subcribe {
+  color: map-get($color, darkColor);
+  border: none;
+  outline: none;
+}
+
+@media screen and (max-width: 768px) {
+  .section-banner {
+    min-height: 740px;
+    background-image: map-get($image, banner-mb-bg);
+    .banner {
+      &-content {
+        left: calc((100vw - (100vw - 48px)) / 2);
+        width: 80%;
+      }
+      &-title {
+        font-size: 48px;
+      }
+      &-statitics {
+        display: none;
+      }
+    }
+  }
+
+  .category-item {
+    &-content {
+      padding: 16px;
+    }
+    &-title {
+      font-size: 14px;
+      margin-bottom: 11px;
+    }
+  }
+
+  .product-item {
+    &-name {
+      font-size: 12px;
+    }
+    .sale-product {
+      position: absolute;
+      top: 24px;
+      left: 18px;
+    }
+    .sale-price {
+      font-size: 10px;
+    }
+    .product-price {
+      font-size: 10px;
+    }
+    .discounted .product-price {
+      font-size: 10px;
+    }
+  }
+
+  .section-contact {
+    background-image: map-get($image, footer-mb-bg);
+  }
+
+  .service-item {
+    &-title {
+      margin: 8px 0;
+    }
+    &-action {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    &-content {
+      max-width: calc((100vw - 48px) - 84px);
+    }
+  }
+
+  .section-contact {
+    background-image: map-get($image, footer-mb-bg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    z-index: 0;
+
+    &::after {
+      content: "";
+      background-color: map-get($color, blackColor);
+      opacity: $opacity-base;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 0;
+    }
+
+    .contact-wrapper {
+      position: relative;
+      padding: 37px 0;
+      z-index: 2;
+
+      .contact-description {
+        .contact-txt {
+          max-width: 80%;
+          margin-bottom: 24px;
+        }
+      }
+
+      .contact-description {
+        color: map-get($color, whiteColor);
+        font-size: 24px;
+      }
+
+      .contact-form {
+        text-align: end;
+        .form-contact {
+          display: flex;
+          flex-direction: column;
+        }
+      }
+
+      .form-contact-input {
+        min-width: calc(100vw - 48px);
+        margin: 0;
+      }
+    }
+  }
+}
+
+//

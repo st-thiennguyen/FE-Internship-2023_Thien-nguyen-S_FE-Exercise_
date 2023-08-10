@@ -8,14 +8,6 @@
   right: 0;
   .header-desktop {
     margin-top: 48px;
-    .navbar-item {
-      margin: 0 48px;
-      &-link {
-        color: map-get($color, primaryColor);
-        font-size: 18px;
-        font-weight: 700;
-      }
-    }
 
     .icon-item {
       margin: 0 12px;
@@ -30,12 +22,11 @@
 }
 
 @media screen and (max-width: 768px) {
+  #header {
+    background-color: map-get($color, whiteColor);
+  }
   .header-desktop {
     display: none;
-  }
-
-  #header {
-    background-color: var(--whiteColor);
   }
 
   .header-mobile {
