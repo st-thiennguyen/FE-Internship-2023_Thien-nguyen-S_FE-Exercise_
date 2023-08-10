@@ -6,6 +6,10 @@
   background-position: center;
 }
 
+.icon-search {
+  background-image: url("../images/ic-search.svg");
+}
+
 .icon-truck-yellow {
   margin-right: 10px;
   background-image: url("../images/ic-truck-yellow.svg");
