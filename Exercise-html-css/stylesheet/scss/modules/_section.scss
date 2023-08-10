@@ -5,17 +5,17 @@
 .section-title {
   color: map-get($color, darkColor);
   font-size: 32px;
-  font-weight: 300;
+  font-weight: map-get($font-weight, light);
   margin-bottom: 40px;
 }
 
 @media screen and (max-width: map-get($breakpoints, md)) {
   .section {
-    padding: 24px 0;
+    padding: 20px 0;
   }
 
   .section-title {
-    font-size: 18px;
+    font-size: map-get($font-sizes, lg);
     margin-bottom: 16px;
   }
 }

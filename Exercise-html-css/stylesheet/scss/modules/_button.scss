@@ -28,7 +28,7 @@
 
 @media screen and (max-width: map-get($breakpoints, md)) {
   .btn {
-    font-size: 10px;
+    font-size: map-get($font-sizes, xxs);
     padding: 3px 10px;
   }
 

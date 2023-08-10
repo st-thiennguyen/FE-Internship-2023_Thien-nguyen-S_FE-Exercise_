@@ -8,7 +8,7 @@
     }
     .footer-top-txt {
       color: map-get($color, whiteColor);
-      font-size: 14px;
+      font-size: map-get($font-sizes, sm);
       margin-bottom: 60px;
       max-width: 500px;
     }
@@ -22,8 +22,8 @@
 
     .infor-item-title {
       color: map-get($color, whiteColor);
-      font-size: 16px;
-      font-weight: 700;
+      font-size: map-get($font-sizes, md);
+      font-weight: map-get($font-weight, bold);
       margin-bottom: 20px;
     }
 
@@ -33,13 +33,13 @@
 
     .subitem-item-link {
       color: map-get($color, whiteColor);
-      font-size: 14px;
+      font-size: map-get($font-sizes, sm);
     }
   }
   .footer-copyright {
     padding: 24px;
     color: map-get($color, whiteColor);
-    font-size: 12px;
+    font-size: map-get($font-sizes, xxs);
     border-top: 1px solid map-get($color, whiteColor);
   }
 
@@ -63,6 +63,6 @@
   }
 
   .subitem-item-link {
-    font-size: 12px;
+    font-size: map-get($font-sizes, xs);
   }
 }

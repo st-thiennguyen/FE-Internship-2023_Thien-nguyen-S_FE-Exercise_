@@ -2,7 +2,7 @@
   margin: 0 48px;
   &-link {
     color: map-get($color, primaryColor);
-    font-size: 18px;
+    font-size: map-get($font-sizes, lg);
     font-weight: 700;
   }
 }
