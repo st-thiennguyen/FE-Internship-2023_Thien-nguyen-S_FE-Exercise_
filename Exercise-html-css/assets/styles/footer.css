@@ -57,3 +57,17 @@
 .org-link {
   color: var(--whiteColor);
 }
+
+@media screen and (max-width: 768px) {
+  .footer-wrapper {
+    padding: 24px 0;
+  }
+
+  .social-list {
+    display: none;
+  }
+
+  .subitem-item-link {
+    font-size: 12px;
+  }
+}

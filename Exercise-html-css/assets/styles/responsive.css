@@ -1,7 +1,5 @@
 @media screen and (max-width: 768px) {
   .row {
-    display: flex;
-    flex-wrap: wrap;
     margin: -4px;
   }
 
@@ -61,58 +59,8 @@
     max-width: calc(100vw - 48px);
   }
 
-  .section,
-  .footer-wrapper {
+  .section {
     padding: 24px 0;
-  }
-
-  .section-banner {
-    background-image: url("../images/banner-mobile-bg.png");
-  }
-
-  .section-contact {
-    background-image: url("../images/footer-mobile-bg.png");
-  }
-
-  #header {
-    background-color: var(--whiteColor);
-  }
-
-  .header-mobile {
-    display: flex;
-    padding: 20px 0;
-  }
-
-  .header-mobile-logo img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-  }
-
-  .navbar-mobile-list {
-    flex-direction: row-reverse;
-  }
-
-  .banner-wrapper .banner-content {
-    left: calc((100vw - (100vw - 48px)) / 2);
-    width: 80%;
-  }
-
-  .banner-title {
-    font-size: 48px;
-  }
-
-  .banner-wrapper .banner-statitics {
-    display: none;
-  }
-
-  .category-item-content {
-    padding: 16px;
-  }
-
-  .category-item-title {
-    font-size: 14px;
-    margin-bottom: 11px;
   }
 
   .btn {
@@ -124,74 +72,5 @@
     font-size: 8px;
     border-radius: 9px;
     padding: 2px 5px;
-  }
-
-  .section-title {
-    font-size: 18px;
-    margin-bottom: 16px;
-  }
-
-  .product-item-name {
-    font-size: 12px;
-  }
-
-  .sale-price {
-    font-size: 10px;
-  }
-
-  .discounted .product-price {
-    font-size: 10px;
-  }
-
-  .product-price {
-    font-size: 10px;
-  }
-
-  .service-item-title {
-    margin: 8px 0;
-  }
-
-  .service-item-action {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .service-item-content {
-    max-width: calc((100vw - 48px) - 84px);
-  }
-
-  .contact-txt {
-    max-width: 80%;
-    margin-bottom: 24px;
-  }
-
-  .subitem-item-link {
-    font-size: 12px;
-  }
-
-  .sub-btn {
-    padding: 7px 20px;
-    margin-top: 16px;
-    font-weight: 700;
-    font-size: 13px;
-  }
-
-  .social-list {
-    display: none;
-  }
-
-  .form-contact {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .form-contact-input {
-    min-width: calc(100vw - 48px);
-    margin: 0;
-  }
-
-  .btn-mb-none-ouline {
-    border: none;
   }
 }

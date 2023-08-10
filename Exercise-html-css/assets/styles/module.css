@@ -140,6 +140,7 @@ li {
   font-weight: 700;
   height: fit-content;
   width: fit-content;
+  cursor: pointer;
 }
 
 .btn-rounded {
