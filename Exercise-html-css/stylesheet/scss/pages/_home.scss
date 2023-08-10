@@ -1,0 +1,61 @@
+/* BANNER SECTION */
+.section-banner {
+  height: 100vh;
+  min-height: 800px;
+  background-image: map-get($image, banner-bg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  z-index: 0;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 0;
+    background-color: map-get($color, blackColor);
+    opacity: $opacity-base;
+  }
+  .banner {
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    &-content {
+      z-index: 1;
+      position: absolute;
+      width: 40%;
+      top: 50%;
+      transform: translateY(-50%);
+      left: calc((100vw - 1152px) / 2 + 96px);
+      color: map-get($color, whiteColor);
+      margin: 0 auto;
+    }
+
+    &-title {
+      font-size: 72px;
+      font-weight: 700;
+    }
+    &-action {
+      color: map-get($color, whiteColor);
+      font-size: 24px;
+      font-weight: 700;
+      text-decoration-line: underline;
+      text-transform: uppercase;
+      margin-left: 20px;
+    }
+
+    &-statitics {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      z-index: 1;
+      background-color: map-get($color, whiteColor);
+      margin: 0 auto;
+      padding: 14px 0 14px calc((100vw - 1152px) / 2 + 96px);
+      border-radius: 0 70px 0 0;
+      border-bottom: 1px solid var(--greyLightColor);
+    }
+  }
+}
