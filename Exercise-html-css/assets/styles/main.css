@@ -19,6 +19,7 @@ body {
 /* BANNER SECTION */
 .section-banner {
   height: 100vh;
+  min-height: 800px;
   background-image: url("../images/banner-bg.png");
   background-size: cover;
   background-position: center;
@@ -274,6 +275,7 @@ body {
 
 @media screen and (max-width: 768px) {
   .section-banner {
+    min-height: 740px;
     background-image: url("../images/banner-mobile-bg.png");
   }
 
