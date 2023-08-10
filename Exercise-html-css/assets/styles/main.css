@@ -343,13 +343,6 @@ body {
     margin-bottom: 24px;
   }
 
-  .btn-subcribe {
-    padding: 7px 20px;
-    margin-top: 16px;
-    font-weight: 700;
-    font-size: 13px;
-  }
-
   .form-contact {
     display: flex;
     flex-direction: column;
