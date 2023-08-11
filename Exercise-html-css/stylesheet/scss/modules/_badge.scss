@@ -8,8 +8,8 @@
 }
 
 .bagde-red {
-  background: map-get($color, redColor);
-  color: map-get($color, whiteColor);
+  background: map-get($color, red);
+  color: map-get($color, white);
 }
 
 @media screen and (max-width: map-get($breakpoints, md)) {

@@ -1,9 +1,9 @@
 .btn {
   text-transform: uppercase;
   padding: 14px 18px;
-  color: map-get($color, darkColor);
-  background-color: map-get($color, whiteColor);
-  border-radius: 33.33px;
+  color: map-get($color, dark);
+  background-color: map-get($color, white);
+  border-radius: 33px;
   font-size: 13px;
   font-weight: 700;
   height: fit-content;
@@ -16,12 +16,12 @@
 }
 
 .btn-primary {
-  background-color: map-get($color, primaryColor);
-  color: map-get($color, whiteColor);
+  background-color: map-get($color, primary);
+  color: map-get($color, white);
 }
 
 .btn-subcribe {
-  color: map-get($color, darkColor);
+  color: map-get($color, dark);
   border: none;
   outline: none;
 }

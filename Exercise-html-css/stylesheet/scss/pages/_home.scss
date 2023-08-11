@@ -11,7 +11,7 @@
     content: "";
     @include position(0, 0, 0, 0, absolute);
     z-index: 0;
-    background-color: map-get($color, blackColor);
+    background-color: map-get($color, black);
     opacity: $opacity-base;
   }
   .banner {
@@ -29,7 +29,7 @@
         absolute
       );
       transform: translateY(-50%);
-      color: map-get($color, whiteColor);
+      color: map-get($color, white);
       margin: 0 auto;
     }
 
@@ -38,7 +38,7 @@
       font-weight: map-get($font-weight, bold);
     }
     &-action-txt {
-      color: map-get($color, whiteColor);
+      color: map-get($color, white);
       font-size: map-get($font-sizes, xxl);
       font-weight: map-get($font-weight, bold);
       text-decoration-line: underline;
@@ -49,12 +49,12 @@
     &-statitics {
       @include position(null, null, 0, 0, absolute);
       z-index: 1;
-      background-color: map-get($color, whiteColor);
+      background-color: map-get($color, white);
       margin: 0 auto;
       padding: 14px 0 14px calc((100vw - 1152px) / 2 + 96px);
       border-radius: 0 70px 0 0;
-      border-bottom: 1px solid var(--greyLightColor);
-      .statitic-item {
+      border-bottom: 1px solid map-get($color, greyLight);
+      .statistic {
         align-items: start;
         padding: 24px;
         &:first-child {
@@ -65,25 +65,25 @@
           padding-right: 88px;
         }
 
-        .statistic-title {
+        &-title {
           font-size: map-get($font-sizes, sm);
           font-weight: map-get($font-weight, bold);
         }
 
-        .statistic-content {
+        &-content {
           max-width: 200px;
         }
 
-        .statistic-description {
+        &-description {
           font-size: map-get($font-sizes, xs);
-          color: map-get($color, greyColor);
+          color: map-get($color, grey);
         }
       }
     }
   }
 }
 
-.category-item {
+.category {
   &-img {
     position: relative;
     width: 100%;
@@ -102,7 +102,7 @@
   }
   &-title {
     margin-bottom: 15px;
-    color: map-get($color, whiteColor);
+    color: map-get($color, white);
     font-size: map-get($font-sizes, xxl);
     font-weight: 400;
   }
@@ -110,7 +110,7 @@
   &-img::after {
     @include position(0, 0, 0, 0, absolute);
     content: "";
-    background-color: map-get($color, blackColor);
+    background-color: map-get($color, black);
     opacity: 0.5;
   }
 }
@@ -118,7 +118,7 @@
 /* CATEGORY */
 
 /* PRODUCT */
-.product-item {
+.product {
   &-image {
     position: relative;
     img {
@@ -128,25 +128,25 @@
     }
   }
   &-name {
-    color: map-get($color, darkColor);
+    color: map-get($color, dark);
     font-size: map-get($font-sizes, md);
     font-weight: 300;
   }
   .sale-product {
     @include position(24px, null, null, 18px, absolute);
   }
-  .sale-price {
-    color: map-get($color, redColor);
+  &-price-sale {
+    color: map-get($color, red);
     font-size: map-get($font-sizes, xl);
   }
 
-  .product-price {
-    color: map-get($color, darkColor);
+  &-price-base {
+    color: map-get($color, dark);
     font-size: map-get($font-sizes, xl);
   }
 
-  .discounted .product-price {
-    color: map-get($color, greyDarkColor);
+  .discounted &-price-base {
+    color: map-get($color, greyDark);
     font-size: map-get($font-sizes, xl);
   }
 }
@@ -154,27 +154,27 @@
 /* Services */
 .section-services {
   padding: 64px 0;
-  background-color: var(--greyLightColor);
-  .service-item {
+  background-color: map-get($color, greyLight);
+  .service {
     &-title {
-      color: map-get($color, darkColor);
+      color: map-get($color, dark);
       font-size: map-get($font-sizes, md);
       margin-top: 46px;
       margin-bottom: 16px;
     }
     &-subtitle {
-      color: map-get($color, greyColor);
+      color: map-get($color, grey);
       font-size: map-get($font-sizes, sm);
     }
     &-image {
       width: 68px;
       height: 68px;
-      background-color: map-get($color, whiteColor);
+      background-color: map-get($color, white);
       border-radius: 10px;
     }
-    &:hover .service-item-title,
-    &:hover .service-item-subtitle {
-      color: map-get($color, primaryColor);
+    &:hover .service-title,
+    &:hover .service-subtitle {
+      color: map-get($color, primary);
     }
   }
 }
@@ -192,7 +192,7 @@
 
   &::after {
     content: "";
-    background-color: map-get($color, blackColor);
+    background-color: map-get($color, black);
     opacity: $opacity-base;
     @include position(0, 0, 0, 0, absolute);
     z-index: 0;
@@ -204,7 +204,7 @@
     z-index: 2;
 
     .contact-description {
-      color: map-get($color, whiteColor);
+      color: map-get($color, white);
       font-size: map-get($font-sizes, xxl);
     }
 
@@ -227,7 +227,7 @@
 }
 
 .btn-subcribe {
-  color: map-get($color, darkColor);
+  color: map-get($color, dark);
   border: none;
   outline: none;
 }
@@ -250,7 +250,7 @@
     }
   }
 
-  .category-item {
+  .category {
     &-content {
       padding: 16px;
     }
@@ -269,20 +269,20 @@
     padding: 24px 0;
   }
 
-  .product-item {
+  .product {
     &-name {
       font-size: map-get($font-sizes, xs);
     }
-    .sale-price,
-    .product-price,
-    .discounted .product-price {
+    &-price-sale,
+    &-price-base,
+    .discounted &-price-base {
       font-size: map-get($font-sizes, xxs);
     }
   }
 
-  .service-item {
+  .service {
     &-title {
-      margin: 8px 0;
+      margin: 8px 0 !important;
     }
     &-action {
       display: flex;
@@ -310,7 +310,7 @@
       }
 
       .contact-description {
-        color: map-get($color, whiteColor);
+        color: map-get($color, white);
         font-size: map-get($font-sizes, xxl);
       }
 

@@ -1,13 +1,13 @@
 /* FOOTER */
 .footer {
-  background-color: map-get($color, primaryColor);
+  background-color: map-get($color, primary);
   .footer-wrapper {
     padding: 45px 0 60px 0;
     .footer-top-logo {
       margin-bottom: 24px;
     }
     .footer-top-txt {
-      color: map-get($color, whiteColor);
+      color: map-get($color, white);
       font-size: map-get($font-sizes, sm);
       margin-bottom: 60px;
       max-width: 500px;
@@ -17,11 +17,11 @@
     }
 
     .social-action {
-      color: map-get($color, whiteColor);
+      color: map-get($color, white);
     }
 
     .infor-item-title {
-      color: map-get($color, whiteColor);
+      color: map-get($color, white);
       font-size: map-get($font-sizes, md);
       font-weight: map-get($font-weight, bold);
       margin-bottom: 20px;
@@ -32,15 +32,15 @@
     }
 
     .subitem-item-link {
-      color: map-get($color, whiteColor);
+      color: map-get($color, white);
       font-size: map-get($font-sizes, sm);
     }
   }
   .footer-copyright {
     padding: 24px;
-    color: map-get($color, whiteColor);
+    color: map-get($color, white);
     font-size: map-get($font-sizes, xxs);
-    border-top: 1px solid map-get($color, whiteColor);
+    border-top: 1px solid map-get($color, white);
   }
 
   .copyright-txt {
@@ -49,7 +49,7 @@
   }
 
   .org-link {
-    color: map-get($color, whiteColor);
+    color: map-get($color, white);
   }
 }
 

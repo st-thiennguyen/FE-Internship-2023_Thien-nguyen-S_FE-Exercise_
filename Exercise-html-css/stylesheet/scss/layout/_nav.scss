@@ -1,7 +1,7 @@
 .navbar-item {
   margin: 0 48px;
-  &-link {
-    color: map-get($color, primaryColor);
+  .navbar-link {
+    color: map-get($color, primary);
     font-size: map-get($font-sizes, lg);
     font-weight: 700;
   }
