@@ -424,7 +424,7 @@ body {
 .footer .footer-copyright {
   padding: 24px;
   color: #fff;
-  font-size: 10px;
+  font-size: 12px;
   border-top: 1px solid #fff;
 }
 .footer .copyright-txt {
@@ -518,25 +518,25 @@ body {
   border-radius: 0 70px 0 0;
   border-bottom: 1px solid #f6f6f6;
 }
-.section-banner .banner-statitics .statistic {
+.section-banner .banner-statitics .statistic-item {
   align-items: start;
   padding: 24px;
 }
-.section-banner .banner-statitics .statistic:first-child {
+.section-banner .banner-statitics .statistic-item:first-child {
   align-items: start;
   padding-left: 0;
 }
-.section-banner .banner-statitics .statistic:last-child {
+.section-banner .banner-statitics .statistic-item:last-child {
   padding-right: 88px;
 }
-.section-banner .banner-statitics .statistic-title {
+.section-banner .banner-statitics .statistic-item .statistic-title {
   font-size: 14px;
   font-weight: 700;
 }
-.section-banner .banner-statitics .statistic-content {
+.section-banner .banner-statitics .statistic-item .statistic-content {
   max-width: 200px;
 }
-.section-banner .banner-statitics .statistic-description {
+.section-banner .banner-statitics .statistic-item .statistic-description {
   font-size: 12px;
   color: #a8a8a8;
 }

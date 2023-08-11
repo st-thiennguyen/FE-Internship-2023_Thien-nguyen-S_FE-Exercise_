@@ -54,7 +54,7 @@
       padding: 14px 0 14px calc((100vw - 1152px) / 2 + 96px);
       border-radius: 0 70px 0 0;
       border-bottom: 1px solid map-get($color, greyLight);
-      .statistic {
+      .statistic-item {
         align-items: start;
         padding: 24px;
         &:first-child {
@@ -64,19 +64,20 @@
         &:last-child {
           padding-right: 88px;
         }
+        .statistic {
+          &-title {
+            font-size: map-get($font-sizes, sm);
+            font-weight: map-get($font-weight, bold);
+          }
 
-        &-title {
-          font-size: map-get($font-sizes, sm);
-          font-weight: map-get($font-weight, bold);
-        }
+          &-content {
+            max-width: 200px;
+          }
 
-        &-content {
-          max-width: 200px;
-        }
-
-        &-description {
-          font-size: map-get($font-sizes, xs);
-          color: map-get($color, grey);
+          &-description {
+            font-size: map-get($font-sizes, xs);
+            color: map-get($color, grey);
+          }
         }
       }
     }
