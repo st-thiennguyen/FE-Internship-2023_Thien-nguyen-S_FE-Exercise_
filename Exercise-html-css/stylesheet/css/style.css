@@ -631,7 +631,8 @@ body {
   background-color: #fff;
   border-radius: 10px;
 }
-.section-services .service:hover .service-title, .section-services .service:hover .service-subtitle {
+.section-services .service:hover .service-title,
+.section-services .service:hover .service-subtitle {
   color: #fbb03b;
 }
 
@@ -720,7 +721,9 @@ body {
   .product-name {
     font-size: 12px;
   }
-  .product-price-sale, .product-price-base, .discounted .product-price-base {
+  .product-price-sale,
+  .product-price-base,
+  .discounted .product-price-base {
     font-size: 10px;
   }
   .service-title {
