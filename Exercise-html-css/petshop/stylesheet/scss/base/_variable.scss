@@ -1,0 +1,52 @@
+$color: (
+  primary: #ffc017,
+  white: #fff,
+  textBlack: #333,
+  black: #000,
+  redLight: #eb5757,
+);
+
+$font-family-base: "Poppins", sans-serif;
+$line-height-txt: 1.2;
+
+$font-size: (
+  xxs: 10px,
+  xs: 12px,
+  sm: 14px,
+  md: 16px,
+  lg: 18px,
+  xl: 20px,
+  xxl: 24px,
+);
+
+$font-weight: (
+  light: 300,
+  normal: 400,
+  medium: 500,
+  bold: 700,
+);
+
+$breakpoints: (
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+);
+
+$image: (
+  logo-header: url("../../assets/images/logo-petshop.svg"),
+  banner-bg: url("../../assets/images/banner-bg.png"),
+);
+
+$icon: (
+  cart-24: url("../../assets/images/ic-cart-header.svg"),
+  cart-16: url("../../assets/images/ic-cart-16.svg"),
+  mail-24: url("../../assets/images/ic-mail-24.svg"),
+  phone-24: url("../../assets/images/ic-phone-24.svg"),
+  map-24: url("../../assets/images/ic-map-24.svg"),
+);
+
+$p-col: 20px;
+
+$icon-size: 40px;
+$icon-size-sm: 24px;
