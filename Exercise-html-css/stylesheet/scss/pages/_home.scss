@@ -45,47 +45,47 @@
       text-transform: uppercase;
       margin-left: 20px;
     }
+  }
+}
 
-    &-statitics {
-      @include position(null, null, 0, 0, absolute);
-      z-index: 1;
-      background-color: map-get($color, white);
-      margin: 0 auto;
-      padding: 14px 0 14px calc((100vw - 1152px) / 2 + 96px);
-      border-radius: 0 70px 0 0;
-      border-bottom: 1px solid map-get($color, greyLight);
-      .statistic-item {
-        align-items: start;
-        padding: 24px;
-        &:first-child {
-          align-items: start;
-          padding-left: 0;
-        }
-        &:last-child {
-          padding-right: 88px;
-        }
-        .statistic {
-          &-title {
-            font-size: map-get($font-sizes, sm);
-            font-weight: map-get($font-weight, bold);
-          }
+.banner-statitics {
+  @include position(null, null, 0, 0, absolute);
+  z-index: 1;
+  background-color: map-get($color, white);
+  margin: 0 auto;
+  padding: 14px 0 14px calc((100vw - 1152px) / 2 + 96px);
+  border-radius: 0 70px 0 0;
+  border-bottom: 1px solid map-get($color, greyLight);
+  .statistic-item {
+    align-items: start;
+    padding: 24px;
+    &:first-child {
+      align-items: start;
+      padding-left: 0;
+    }
+    &:last-child {
+      padding-right: 88px;
+    }
+    .statistic {
+      &-title {
+        font-size: map-get($font-sizes, sm);
+        font-weight: map-get($font-weight, bold);
+      }
 
-          &-content {
-            max-width: 200px;
-          }
+      &-content {
+        max-width: 200px;
+      }
 
-          &-description {
-            font-size: map-get($font-sizes, xs);
-            color: map-get($color, grey);
-          }
-        }
+      &-description {
+        font-size: map-get($font-sizes, xs);
+        color: map-get($color, grey);
       }
     }
   }
 }
 
-.category {
-  &-img {
+.category-item {
+  .category {
     position: relative;
     width: 100%;
     height: 100%;
@@ -94,25 +94,25 @@
       width: 100%;
       height: 100%;
     }
-  }
 
-  &-content {
-    @include position(0, 0, 0, 0, absolute);
-    z-index: 2;
-    padding: 50px 40px;
-  }
-  &-title {
-    margin-bottom: 15px;
-    color: map-get($color, white);
-    font-size: map-get($font-sizes, xxl);
-    font-weight: 400;
-  }
+    &-content {
+      @include position(0, 0, 0, 0, absolute);
+      z-index: 2;
+      padding: 50px 40px;
+    }
+    &-title {
+      margin-bottom: 15px;
+      color: map-get($color, white);
+      font-size: map-get($font-sizes, xxl);
+      font-weight: 400;
+    }
 
-  &-img::after {
-    @include position(0, 0, 0, 0, absolute);
-    content: "";
-    background-color: map-get($color, black);
-    opacity: 0.5;
+    &::after {
+      @include position(0, 0, 0, 0, absolute);
+      content: "";
+      background-color: map-get($color, black);
+      opacity: 0.5;
+    }
   }
 }
 
@@ -136,19 +136,19 @@
   .sale-product {
     @include position(24px, null, null, 18px, absolute);
   }
+  &-price {
+    font-size: map-get($font-sizes, xl);
+  }
   &-price-sale {
     color: map-get($color, red);
-    font-size: map-get($font-sizes, xl);
   }
 
   &-price-base {
     color: map-get($color, dark);
-    font-size: map-get($font-sizes, xl);
   }
 
   .discounted &-price-base {
     color: map-get($color, greyDark);
-    font-size: map-get($font-sizes, xl);
   }
 }
 
@@ -229,8 +229,6 @@
 
 .btn-subcribe {
   color: map-get($color, dark);
-  border: none;
-  outline: none;
 }
 
 @media screen and (max-width: 768px) {
@@ -251,13 +249,15 @@
     }
   }
 
-  .category {
-    &-content {
-      padding: 16px;
-    }
-    &-title {
-      font-size: map-get($font-sizes, sm);
-      margin-bottom: 11px;
+  .category-item {
+    .category {
+      &-content {
+        padding: 16px;
+      }
+      &-title {
+        font-size: map-get($font-sizes, sm);
+        margin-bottom: 11px;
+      }
     }
   }
 
@@ -274,9 +274,7 @@
     &-name {
       font-size: map-get($font-sizes, xs);
     }
-    &-price-sale,
-    &-price-base,
-    .discounted &-price-base {
+    &-price {
       font-size: map-get($font-sizes, xxs);
     }
   }

@@ -8,6 +8,8 @@
   font-weight: 700;
   height: fit-content;
   width: fit-content;
+  border: none;
+  outline: none;
   cursor: pointer;
 }
 
@@ -18,12 +20,6 @@
 .btn-primary {
   background-color: map-get($color, primary);
   color: map-get($color, white);
-}
-
-.btn-subcribe {
-  color: map-get($color, dark);
-  border: none;
-  outline: none;
 }
 
 @media screen and (max-width: map-get($breakpoints, md)) {
