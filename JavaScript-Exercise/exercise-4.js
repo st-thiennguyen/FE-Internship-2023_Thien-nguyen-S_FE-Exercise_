@@ -9,7 +9,7 @@
 function getUniqueRandomArray(arrLength, min, max) {
   let result = [];
   for (let i = 0; i < arrLength; i++) {
-    var unique = true;
+    let unique = true;
     const item = Math.floor(Math.random() * (max - min) + 1) + min;
     for (const value of result) {
       if (value === item) {
