@@ -9,11 +9,11 @@
 function sumOfTwoConsecutive(arr) {
   var max = 0;
   for (let i = 0; i < arr.length; i++) {
-    let sum = arr[i] + arr[i + 1];
+    let sum = arr[i] + (arr[i + 1] ?? 0);
     if (sum > max) {
       max = sum;
     }
   }
   return max;
 }
-console.log(sumOfTwoConsecutive([1, 2, 3, 7, 5, 6, 4]));
+console.log(sumOfTwoConsecutive([1, 2, 3, 7, 5, 6, 9, 99, 10]));

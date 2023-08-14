@@ -7,14 +7,18 @@
  * Ex: (4, 1, 10) => [3, 6, 1, 9]
  */
 function getUniqueRandomArray(arrLength, min, max) {
-  var result = [];
+  let result = [];
   for (let i = 0; i < arrLength; i++) {
+    var unique = true;
     const item = Math.floor(Math.random() * (max - min) + 1) + min;
-    var check = result.includes(item);
-    if (!check) {
+    for (const value of result) {
+      if (value === item) {
+        unique = false;
+        i--;
+      }
+    }
+    if (unique) {
       result.push(item);
-    } else {
-      i--;
     }
   }
   return result;

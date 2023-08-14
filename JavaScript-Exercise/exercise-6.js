@@ -7,13 +7,11 @@
  * Ex: ([1, 2, 3, 4, 5, 6, 7], 3) => 9
  */
 function sumOfDividedNumber(arr, num) {
-  var result = 0;
-  for (const value of arr) {
-    if (value % num === 0) {
-      result += value;
-    }
-  }
+  var result = arr.reduce(
+    (total, value) => (value % num === 0 ? (total += value) : total),
+    0
+  );
   return result;
 }
 
-console.log(sumOfDividedNumber([1, 2, 3, 4, 5, 6, 7], 3));
+console.log(sumOfDividedNumber([1, 2, 3, 4, 5, 6, 7], 2));
