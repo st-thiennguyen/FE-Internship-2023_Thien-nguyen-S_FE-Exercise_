@@ -5,6 +5,10 @@
   }
 }
 
+.footer-title {
+  font-size: 26px;
+}
+
 .footer-list {
   .footer-item {
     margin-top: 24px;
@@ -12,9 +16,7 @@
     &:first-child {
       margin-top: 32px;
     }
-    .footer-title {
-      font-size: 26px;
-    }
+
     i {
       margin-right: 18px;
     }

@@ -274,15 +274,16 @@ body {
   padding: 48px 0 58px 0;
 }
 
+.footer-title {
+  font-size: 26px;
+}
+
 .footer-list .footer-item {
   margin-top: 24px;
   font-size: 20px;
 }
 .footer-list .footer-item:first-child {
   margin-top: 32px;
-}
-.footer-list .footer-item .footer-title {
-  font-size: 26px;
 }
 .footer-list .footer-item i {
   margin-right: 18px;
