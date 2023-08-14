@@ -132,9 +132,6 @@
 }
 
 .section-gallery {
-  .gallery-list {
-    margin: 0;
-  }
   .gallery-item {
     .gallery {
       &-img {
@@ -151,13 +148,6 @@
     &:nth-child(2) .gallery-action,
     &:nth-child(4) .gallery-action {
       flex-direction: column-reverse;
-    }
-
-    &:first-child {
-      padding-left: 0;
-    }
-    &:last-child {
-      padding-right: 0;
     }
   }
 }
