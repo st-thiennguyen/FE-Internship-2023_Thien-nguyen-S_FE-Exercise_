@@ -13,6 +13,7 @@ function sumOfDividedNumber(arr, num) {
       result += value;
     }
   }
-  console.log(result);
+  return result;
 }
-sumOfDividedNumber([1, 2, 3, 4, 5, 6, 7], 3);
+
+console.log(sumOfDividedNumber([1, 2, 3, 4, 5, 6, 7], 3));

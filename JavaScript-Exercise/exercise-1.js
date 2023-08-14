@@ -4,6 +4,6 @@ function repeatString(inputString, times) {
   for (let i = 0; i < times; i++) {
     result += inputString;
   }
-  console.log(result);
+  return result;
 }
-repeatString("FE", 4);
+console.log(repeatString("FE", 4));

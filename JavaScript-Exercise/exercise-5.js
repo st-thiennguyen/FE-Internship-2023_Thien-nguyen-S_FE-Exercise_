@@ -11,6 +11,6 @@ function generateRandomHexColor() {
     const character = regex[Math.floor(Math.random() * 16)];
     color += character;
   }
-  console.log(color);
+  return color;
 }
-generateRandomHexColor();
+console.log(generateRandomHexColor());

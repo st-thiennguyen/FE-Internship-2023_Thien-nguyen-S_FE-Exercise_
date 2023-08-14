@@ -17,6 +17,6 @@ function getUniqueRandomArray(arrLength, min, max) {
       i--;
     }
   }
-  console.log(result);
+  return result;
 }
-getUniqueRandomArray(4, 1, 10);
+console.log(getUniqueRandomArray(4, 1, 10));

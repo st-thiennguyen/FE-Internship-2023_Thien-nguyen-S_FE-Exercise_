@@ -13,6 +13,6 @@ function getTimeAfterPeriodTime(givenTime, period) {
   var second = Number(second);
   var total = secondOfHour + secondOfMinutes + second + period;
   var timeAfter = new Date(total * 1000).toISOString().slice(11, 19);
-  console.log(timeAfter);
+  return timeAfter;
 }
-getTimeAfterPeriodTime("23:30:29", 6000);
+console.log(getTimeAfterPeriodTime("23:30:29", 6000));

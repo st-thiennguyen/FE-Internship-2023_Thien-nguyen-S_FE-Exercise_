@@ -3,6 +3,8 @@ function countOccurrence(inputString, subString) {
   var result = inputString
     .split(" ")
     .filter((out) => out.toLowerCase() === subString);
-  console.log(result.length);
+  return result.length;
 }
-countOccurrence("The quick brown fox jumps over the lazy dog", "the");
+console.log(
+  countOccurrence("The quick brown fox jumps over the lazy dog", "the")
+);

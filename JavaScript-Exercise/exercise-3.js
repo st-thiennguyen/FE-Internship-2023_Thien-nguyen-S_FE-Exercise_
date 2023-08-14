@@ -12,7 +12,7 @@ function trucateString(inputString, number) {
   for (let i = 0; i < number; i++) {
     result.push(arrString[i]);
   }
-  console.log(result.join(" "));
+  return result.join(" ");
 }
 
-trucateString("The quick brown fox jumps over the lazy dog", 4);
+console.log(trucateString("The quick brown fox jumps over the lazy dog", 4));
