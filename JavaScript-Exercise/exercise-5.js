@@ -5,8 +5,8 @@
  * Ex: () => #1A7B9D
  */
 function generateRandomHexColor() {
-  var regex = "0123456789ABCDEF";
-  var color = "#";
+  const regex = "0123456789ABCDEF";
+  let color = "#";
   for (let i = 0; i < 6; i++) {
     const character = regex[Math.floor(Math.random() * 16)];
     color += character;
