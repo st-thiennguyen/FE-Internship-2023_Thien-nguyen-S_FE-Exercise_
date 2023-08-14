@@ -8,8 +8,8 @@
 
 function sumOfTwoConsecutive(arr) {
   let max = 0;
-  for (let i = 0; i < arr.length; i++) {
-    let sum = arr[i] + (arr[i + 1] ?? 0);
+  for (let i = 0; i < arr.length - 1; i++) {
+    let sum = arr[i] + arr[i + 1];
     if (sum > max) {
       max = sum;
     }
