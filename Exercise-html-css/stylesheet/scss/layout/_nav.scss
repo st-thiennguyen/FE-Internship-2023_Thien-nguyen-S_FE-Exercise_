@@ -1,0 +1,8 @@
+.navbar-item {
+  margin: 0 48px;
+  .navbar-link {
+    color: map-get($color, primary);
+    font-size: map-get($font-sizes, lg);
+    font-weight: 700;
+  }
+}
