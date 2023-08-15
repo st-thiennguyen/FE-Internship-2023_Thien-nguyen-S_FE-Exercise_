@@ -123,23 +123,30 @@ if (products?.length) {
 function addToCart(event, item) {
   // set default action
   event.preventDefault();
+
   // get list cart from localStorage
   var carts = JSON.parse(localStorage.getItem("cart")) || [];
-  // push new item
-  carts.push(item);
-  // set list cart when push new item
-  localStorage.setItem("cart", JSON.stringify(carts));
   // count product duplicate exist in cart
-  const countExist = carts.filter((product) => product.id == item.id).length;
-
-  alert("Add " + countExist + " item " + item.name + "successfully");
-  countProductCart();
+  const itemExist = carts.find((product) => product.id == item.id);
+  if (!itemExist) {
+    carts.push({ ...item, quantity: Number(1) });
+    // set list cart when push new item
+    localStorage.setItem("cart", JSON.stringify(carts));
+  } else {
+    itemExist.quantity += 1;
+    // set list cart when push new item
+    localStorage.setItem("cart", JSON.stringify(carts));
+  }
+  cartCount();
 }
 
-function countProductCart() {
+function cartCount() {
+  // get list cart from localStorage
   var carts = JSON.parse(localStorage.getItem("cart")) || [];
-  const productCount = new Set(carts.map((item) => item.id)).size;
-  cartCountElement.innerText = productCount;
+  // Get total of product cart
+  var cartCount = carts.reduce((total, item) => (total += item.quantity), 0);
+  // append text to element
+  cartCountElement.innerText = cartCount;
 }
-
+cartCount();
 products[0].appendChild(ul);
