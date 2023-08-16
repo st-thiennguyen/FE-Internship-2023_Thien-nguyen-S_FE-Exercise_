@@ -26,98 +26,99 @@ var data = [
   },
 ];
 
-var cartCountElement = document.getElementById("cart-count");
+var cartCountEl = document.getElementById("cart-count");
 
-// find root element
-var products = document.getElementsByClassName("product-list");
-var ul = document.createElement("ul");
-ul.className = "row";
+function createElProdToday() {
+  // find root element
+  var products = document.getElementsByClassName("product-list");
+  // Create product list ul
+  var productListEl = document.createElement("ul");
+  productListEl.className = "row";
+  if (products?.length) {
+    data.forEach(function (item) {
+      // Create li product item wrapper
+      var productItemEl = document.createElement("li");
+      productItemEl.className = "col col-3 col-sm-6";
 
-if (products?.length) {
-  data.forEach(function (item) {
-    // Create li product item wrapper
-    var productItemElement = document.createElement("li");
-    productItemElement.className = "col col-3 col-sm-6";
+      // Create a div wrapper product inside li
+      var productEl = document.createElement("div");
+      productEl.className = "product";
 
-    // Create a div wrapper product inside li
-    var productEmlement = document.createElement("div");
-    productEmlement.className = "product";
+      // Create a action for click to item
+      var productActionEl = document.createElement("a");
+      productActionEl.className = "product-action";
+      productActionEl.href = "#";
 
-    // Create a action for click to item
-    var productActionElement = document.createElement("a");
-    productActionElement.className = "product-action";
-    productActionElement.href = "#";
+      // Create a div wrapper image of item and sale rate
+      var productImageWrapper = document.createElement("div");
+      productImageWrapper.className = "product-image";
 
-    // Create a div wrapper image of item and sale rate
-    var productImageWrapper = document.createElement("div");
-    productImageWrapper.className = "product-image";
+      // create a image tag for show image
+      var imgEl = document.createElement("img");
+      imgEl.src = item.image;
+      imgEl.alt = item.name;
 
-    // create a image tag for show image
-    var imgElement = document.createElement("img");
-    imgElement.src = item.image;
-    imgElement.alt = item.name;
+      // Create a span for display sale rate
+      var saleRate = document.createElement("span");
+      saleRate.className = "sale-product bagde bagde-red";
+      saleRate.innerHTML = "-" + item.discount + "%";
 
-    // Create a span for display sale rate
-    var saleRate = document.createElement("span");
-    saleRate.className = "sale-product bagde bagde-red";
-    saleRate.innerHTML = "-" + item.discount + "%";
+      // create element of show btn add to cart
+      var addToCartEl = document.createElement("div");
+      addToCartEl.className = "product-cart d-flex justify-center item-center";
 
-    // create element of show btn add to cart
-    var addToCartElement = document.createElement("div");
-    addToCartElement.className =
-      "product-cart d-flex justify-center item-center";
+      var addCartBtnEl = document.createElement("button");
+      addCartBtnEl.className = "btn btn-cart-add";
+      addCartBtnEl.innerHTML = "Add to cart";
+      addCartBtnEl.addEventListener("click", (event) => addToCart(event, item));
 
-    var addCartBtnElement = document.createElement("button");
-    addCartBtnElement.className = "btn btn-cart-add";
-    addCartBtnElement.innerHTML = "Add to cart";
-    addCartBtnElement.addEventListener("click", (event) =>
-      addToCart(event, item)
-    );
+      // Create product info div
+      var productInfoEl = document.createElement("div");
 
-    // Create product info div
-    var productInfoElement = document.createElement("div");
+      // Create product name element
+      var productNameEl = document.createElement("h4");
+      productNameEl.className = "product-name";
+      productNameEl.innerHTML = item.name;
 
-    // Create product name element
-    var productNameElement = document.createElement("h4");
-    productNameElement.className = "product-name";
-    productNameElement.innerHTML = item.name;
+      // Create product price wrapper element
+      var productPriceEl = document.createElement("div");
+      productPriceEl.className = "product-price d-flex justify-between";
 
-    // Create product price wrapper element
-    var productPriceElement = document.createElement("div");
-    productPriceElement.className = "product-price d-flex justify-between";
+      // Create product sale price element
+      var productSalePriceEl = document.createElement("span");
+      productSalePriceEl.className = "product-price-sale";
+      productSalePriceEl.innerHTML =
+        "$ " +
+        Number(item.price - (item.price / 100) * item.discount).toFixed(2);
 
-    // Create product sale price element
-    var productSalePriceElement = document.createElement("span");
-    productSalePriceElement.className = "product-price-sale";
-    productSalePriceElement.innerHTML =
-      "$ " + Number(item.price - (item.price / 100) * item.discount).toFixed(2);
+      // Create product base price element
+      var productBasePriceEl = document.createElement("span");
+      productBasePriceEl.className = "product-price-base";
+      productBasePriceEl.innerHTML = "$ " + item.price;
 
-    // Create product base price element
-    var productBasePriceElement = document.createElement("span");
-    productBasePriceElement.className = "product-price-base";
-    productBasePriceElement.innerHTML = "$ " + item.price;
+      addToCartEl.appendChild(addCartBtnEl);
 
-    addToCartElement.appendChild(addCartBtnElement);
+      productImageWrapper.append(imgEl, addToCartEl);
+      if (item.discount) {
+        productActionEl.classList.add("discounted");
+        productPriceEl.appendChild(productSalePriceEl);
+        productImageWrapper.appendChild(saleRate);
+        productPriceEl.appendChild(productSalePriceEl);
+      }
+      productPriceEl.appendChild(productBasePriceEl);
+      productInfoEl.appendChild(productNameEl);
 
-    productImageWrapper.append(imgElement, addToCartElement);
-    if (item.discount) {
-      productActionElement.classList.add("discounted");
-      productPriceElement.appendChild(productSalePriceElement);
-      productImageWrapper.appendChild(saleRate);
-      productPriceElement.appendChild(productSalePriceElement);
-    }
-    productPriceElement.appendChild(productBasePriceElement);
-    productInfoElement.appendChild(productNameElement);
-
-    productActionElement.append(
-      productImageWrapper,
-      productInfoElement,
-      productPriceElement
-    );
-    productEmlement.appendChild(productActionElement);
-    productItemElement.appendChild(productEmlement);
-    ul.appendChild(productItemElement);
-  });
+      productActionEl.append(
+        productImageWrapper,
+        productInfoEl,
+        productPriceEl
+      );
+      productEl.appendChild(productActionEl);
+      productItemEl.appendChild(productEl);
+      productListEl.appendChild(productItemEl);
+    });
+  }
+  products[0].appendChild(productListEl);
 }
 
 function addToCart(event, item) {
@@ -146,7 +147,9 @@ function cartCount() {
   // Get total of product cart
   var cartCount = carts.reduce((total, item) => (total += item.quantity), 0);
   // append text to element
-  cartCountElement.innerText = cartCount;
+  cartCountEl.innerText = cartCount;
 }
+
+createElProdToday();
+
 cartCount();
-products[0].appendChild(ul);
