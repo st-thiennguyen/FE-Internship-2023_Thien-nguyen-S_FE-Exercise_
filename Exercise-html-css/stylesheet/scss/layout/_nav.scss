@@ -6,3 +6,20 @@
     font-weight: 700;
   }
 }
+
+.header-cart {
+  position: relative;
+}
+
+.cart-count {
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  background-color: map-get($color, red);
+  width: 12px;
+  height: 12px;
+  border-radius: 100%;
+  font-size: 10px;
+  color: map-get($color, white);
+  font-weight: map-get($font-weight, medium);
+}

@@ -128,6 +128,21 @@
       height: 100%;
     }
   }
+  &-cart {
+    position: absolute;
+    @include position(0, 0, 0, 0, absolute);
+    transition: background-color 1s ease;
+    .btn-cart-add {
+      opacity: 0;
+      transition: all 1s ease;
+    }
+  }
+  &:hover &-cart {
+    background-color: rgba($color: #000000, $alpha: 0.5);
+    .btn-cart-add {
+      opacity: 1;
+    }
+  }
   &-name {
     color: map-get($color, dark);
     font-size: map-get($font-sizes, md);

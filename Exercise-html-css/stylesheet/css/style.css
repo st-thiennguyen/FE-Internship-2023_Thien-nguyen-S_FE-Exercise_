@@ -95,50 +95,50 @@ body {
   background-position: center;
 }
 .icon-search {
-  background-image: url("/Exercise-html-css/assets/images/ic-search.svg");
+  background-image: url("../../assets/images/ic-search.svg");
 }
 .icon-truck-yellow {
   margin-right: 10px;
-  background-image: url("/Exercise-html-css/assets/images/ic-truck-yellow.svg");
+  background-image: url("../../assets/images/ic-truck-yellow.svg");
 }
 .icon-smile-yellow {
   margin-right: 10px;
-  background-image: url("/Exercise-html-css/assets/images/ic-smile-yellow.svg");
+  background-image: url("../../assets/images/ic-smile-yellow.svg");
 }
 .icon-dollar-yellow {
   margin-right: 10px;
-  background-image: url("/Exercise-html-css/assets/images/ic-guarantee-yellow.svg");
+  background-image: url("../../assets/images/ic-guarantee-yellow.svg");
 }
 .icon-cart-mb {
-  background-image: url("/Exercise-html-css/assets/images/ic-menu-mb.svg");
+  background-image: url("../../assets/images/ic-menu-mb.svg");
 }
 .icon-user-mb {
-  background-image: url("/Exercise-html-css/assets/images/ic-user-mb.svg");
+  background-image: url("../../assets/images/ic-user-mb.svg");
 }
 .icon-truck-service {
-  background-image: url("/Exercise-html-css/assets/images/ic-truck.svg");
+  background-image: url("../../assets/images/ic-truck.svg");
 }
 .icon-payment-service {
-  background-image: url("/Exercise-html-css/assets/images/ic-payment.svg");
+  background-image: url("../../assets/images/ic-payment.svg");
 }
 .icon-guarantee-service {
-  background-image: url("/Exercise-html-css/assets/images/ic-guarantee.svg");
+  background-image: url("../../assets/images/ic-guarantee.svg");
 }
 .icon-quality-service {
-  background-image: url("/Exercise-html-css/assets/images/ic-quality.svg");
+  background-image: url("../../assets/images/ic-quality.svg");
 }
 
 .service:hover .icon-truck-service {
-  background-image: url("/Exercise-html-css/assets/images/ic-truck-yellow.svg");
+  background-image: url("../../assets/images/ic-truck-yellow.svg");
 }
 .service:hover .icon-payment-service {
-  background-image: url("/Exercise-html-css/assets/images/ic-quality-hl.svg");
+  background-image: url("../../assets/images/ic-quality-hl.svg");
 }
 .service:hover .icon-guarantee-service {
-  background-image: url("/Exercise-html-css/assets/images/ic-guarantee-yellow.svg");
+  background-image: url("../../assets/images/ic-guarantee-yellow.svg");
 }
 .service:hover .icon-quality-service {
-  background-image: url("/Exercise-html-css/assets/images/ic-quality-hl.svg");
+  background-image: url("../../assets/images/ic-quality-hl.svg");
 }
 
 .section {
@@ -451,6 +451,22 @@ body {
   font-weight: 700;
 }
 
+.header-cart {
+  position: relative;
+}
+
+.cart-count {
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  background-color: #f00;
+  width: 12px;
+  height: 12px;
+  border-radius: 100%;
+  font-size: 10px;
+  color: #fff;
+}
+
 .text-primary {
   color: #fbb03b;
 }
@@ -459,7 +475,7 @@ body {
 .section-banner {
   height: 100vh;
   min-height: 800px;
-  background-image: url("/Exercise-html-css/assets/images/banner-bg.png");
+  background-image: url("../../assets/images/banner-bg.png");
   background-size: cover;
   background-position: center;
   position: relative;
@@ -584,6 +600,25 @@ body {
   width: 100%;
   height: 100%;
 }
+.product-cart {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+  transition: background-color 1s ease;
+}
+.product-cart .btn-cart-add {
+  opacity: 0;
+  transition: all 1s ease;
+}
+.product:hover .product-cart {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.product:hover .product-cart .btn-cart-add {
+  opacity: 1;
+}
 .product-name {
   color: #333;
   font-size: 16px;
@@ -628,7 +663,8 @@ body {
   background-color: #fff;
   border-radius: 10px;
 }
-.section-services .service:hover .service-title, .section-services .service:hover .service-subtitle {
+.section-services .service:hover .service-title,
+.section-services .service:hover .service-subtitle {
   color: #fbb03b;
 }
 
@@ -638,7 +674,7 @@ body {
 
 /* Contact */
 .section-contact {
-  background-image: url("/Exercise-html-css/assets/images/footer-bg.png");
+  background-image: url("../../assets/images/footer-bg.png");
   background-position: center;
   background-size: cover;
   position: relative;
@@ -686,7 +722,7 @@ body {
 @media screen and (max-width: 768px) {
   .section-banner {
     min-height: 740px;
-    background-image: url("/Exercise-html-css/assets/images/banner-mobile-bg.png");
+    background-image: url("../../assets/images/banner-mobile-bg.png");
   }
   .section-banner .banner-content {
     left: calc((100vw - (100vw - 48px)) / 2);
@@ -730,7 +766,7 @@ body {
     max-width: calc(100vw - 48px - 84px);
   }
   .section-contact {
-    background-image: url("/Exercise-html-css/assets/images/footer-mobile-bg.png");
+    background-image: url("../../assets/images/footer-mobile-bg.png");
   }
   .section-contact .contact-wrapper {
     position: relative;
