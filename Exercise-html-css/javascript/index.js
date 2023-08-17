@@ -3,7 +3,6 @@ import Product from "./product.js";
 import productListRender from "./productListRender.js";
 import CartRender from "./cartListRender.js";
 import Cart from "./cart.js";
-import productListRender from "./productListRender.js";
 
 const products = data.map((item) => new Product(item));
 

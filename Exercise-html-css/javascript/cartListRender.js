@@ -1,6 +1,7 @@
 const CartRender = (data, idElement) => {
   let cartTableEl = document.querySelector(`#${idElement}`);
   let cartTotal = 0;
+
   let tableElement = `
   <table class="cart-table" id="cart-list">
     <tr class="table-header">
