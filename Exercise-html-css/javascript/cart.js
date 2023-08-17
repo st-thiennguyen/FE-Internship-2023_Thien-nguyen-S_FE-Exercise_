@@ -1,3 +1,5 @@
+import CartRender from "./cartListRender.js";
+
 class Cart {
   constructor(item) {
     this.item = [];
@@ -11,11 +13,16 @@ class Cart {
     } else {
       check.quantity += quantity;
     }
+    this.saveCart();
+  };
+
+  saveCart = () => {
     localStorage.setItem("cart", JSON.stringify(this.item));
   };
 
   deleteProduct = (product) => {
-    this.item.filter((prod) => prod.id != product.id);
+    this.item = this.item.filter((prod) => prod.id != product.id);
+    this.saveCart();
   };
 
   countCart = () => {

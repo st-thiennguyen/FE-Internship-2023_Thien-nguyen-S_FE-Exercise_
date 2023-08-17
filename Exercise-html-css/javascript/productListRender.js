@@ -4,10 +4,10 @@ const productList = (data, idElement) => {
   // Create product list ul
   let productListEl = document.createElement("ul");
   productListEl.className = "row";
-  console.log(productBox);
   //prettier-ignore
+  if(productBox != null){
   {
-    data?.length &&
+     data?.length &&
       data.forEach((product) => {
         const prodSalePrice = Number(product.price - (product.price / 100) * product.discount).toFixed(2);
         productListEl.innerHTML += `
@@ -33,7 +33,6 @@ const productList = (data, idElement) => {
   }
 
   productBox.appendChild(productListEl);
-  console.log(productListEl);
+}
 };
-
 export default productList;
