@@ -1,18 +1,20 @@
 import data from "./data.js";
 import Product from "./product.js";
-import productList from "./productListRender.js";
+import productListRender from "./productListRender.js";
 import CartRender from "./cartListRender.js";
 import Cart from "./cart.js";
+import productListRender from "./productListRender.js";
 
 const products = data.map((item) => new Product(item));
 
-productList(products, "product-bestseller");
+productListRender(products, "product-bestseller");
+productListRender(products, "product-recommend");
 
 let carts = new Cart();
 
 const cartCountEl = document.querySelector("#cart-count");
 
-CartRender(carts.item, "shop-cart");
+CartRender(carts.productsCart, "shop-cart");
 
 const handleAddtoCart = (idProd) => {
   const newProd = products.find((prod) => prod.id == idProd);
@@ -37,7 +39,7 @@ const handleClickPlusCart = () => {
     btn.addEventListener("click", (event) => {
       event.preventDefault();
       const prodId = btn.getAttribute("data-index");
-      const prod = carts.item.find((prod) => prod.id == prodId);
+      const prod = carts.productsCart.find((prod) => prod.id == prodId);
       carts.addProduct(prod, 1);
     });
   });
@@ -49,7 +51,7 @@ const handleClickMinusCart = () => {
     btn.addEventListener("click", (event) => {
       event.preventDefault();
       const prodId = btn.getAttribute("data-index");
-      const prod = carts.item.find((prod) => prod.id == prodId);
+      const prod = carts.productsCart.find((prod) => prod.id == prodId);
       carts.addProduct(prod, -1);
     });
   });
@@ -61,7 +63,7 @@ const handleRemoveCart = () => {
     btn.addEventListener("click", (event) => {
       event.preventDefault();
       const prodId = btn.getAttribute("data-index");
-      const prod = carts.item.find((prod) => prod.id == prodId);
+      const prod = carts.productsCart.find((prod) => prod.id == prodId);
       carts.deleteProduct(prod);
     });
   });

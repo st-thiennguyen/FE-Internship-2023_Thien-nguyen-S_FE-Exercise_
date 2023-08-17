@@ -1,4 +1,4 @@
-const productList = (data, idElement) => {
+const productListRender = (data, idElement) => {
   // find root element
   let productBox = document.querySelector(`#${idElement}`);
   // Create product list ul
@@ -35,4 +35,4 @@ const productList = (data, idElement) => {
   productBox.appendChild(productListEl);
 }
 };
-export default productList;
+export default productListRender;

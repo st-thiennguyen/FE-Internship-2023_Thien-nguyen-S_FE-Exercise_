@@ -1,15 +1,15 @@
 import CartRender from "./cartListRender.js";
 
 class Cart {
-  constructor(item) {
-    this.item = [];
+  constructor(productsCart) {
+    this.productsCart = [];
     this.getCart();
   }
 
   addProduct = (product, quantity = 1) => {
-    const check = this.item.find((prod) => prod.id === product.id);
+    const check = this.productsCart.find((prod) => prod.id === product.id);
     if (!check) {
-      this.item.push({ ...product, quantity });
+      this.productsCart.push({ ...product, quantity });
     } else {
       check.quantity += quantity;
     }
@@ -17,32 +17,37 @@ class Cart {
   };
 
   saveCart = () => {
-    localStorage.setItem("cart", JSON.stringify(this.item));
+    localStorage.setItem("cart", JSON.stringify(this.productsCart));
   };
 
   deleteProduct = (product) => {
-    this.item = this.item.filter((prod) => prod.id != product.id);
+    this.productsCart = this.productsCart.filter(
+      (prod) => prod.id != product.id
+    );
     this.saveCart();
   };
 
   countCart = () => {
-    return this.item.reduce((total, item) => (total += item.quantity), 0);
+    return this.productsCart.reduce(
+      (total, item) => (total += item.quantity),
+      0
+    );
   };
 
   getCart = () => {
     const carts = JSON.parse(localStorage.getItem("cart")) || [];
-    this.item = carts;
+    this.productsCart = carts;
   };
 
   totalCart = () => {
-    return this.item.reduce(
+    return this.productsCart.reduce(
       (total, item) => (total *= Number(item.quantity) * Number(item.price)),
       0
     );
   };
 
   reset = () => {
-    this.item = [];
+    this.productsCart = [];
   };
 }
 
