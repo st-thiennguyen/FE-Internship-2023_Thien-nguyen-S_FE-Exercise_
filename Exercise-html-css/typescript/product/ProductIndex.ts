@@ -17,12 +17,3 @@ export const handleAddtoCart = (item:CartItem) => {
   cart.addItem(item);
   RerenderUI("#cart-count",  cart.cartCount());
 };
-
-
-// export const countCart = () =>{
-//   const cartCountEl:Element = document.querySelector("#cart-count");
-//   const cartSize = cart.cartCount();
-//   cartCountEl.textContent = `${cartSize}`;
-// }
-
-
