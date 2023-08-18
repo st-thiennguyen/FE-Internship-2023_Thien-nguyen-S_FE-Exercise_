@@ -1,5 +1,5 @@
 import Cart from "./Cart.js";
-console.log("HEEE");
+import { cart } from "./CartIndex.js";
 
 const CartRender = (data:Cart, idElement:string) => {
     let cartTableEl = document.querySelector(`#${idElement}`);
@@ -59,7 +59,7 @@ const CartRender = (data:Cart, idElement:string) => {
         `</table>
           <div class="cart-total d-flex justify-between item-center">
               <p class="total-price">
-              Total : <span class="price" id="cart-total-price">$${cartTotal.toFixed(2)}</span>
+              Total : <span class="price" id="cart-total-price">$${cartTotal}</span>
               </p>
               <a href="" class="cart-checkout btn btn-primary">
               Proceed checkout
@@ -68,6 +68,24 @@ const CartRender = (data:Cart, idElement:string) => {
       }
   
       cartTableEl && cartTableEl.appendChild(tableEl);
+
+      const plusBtns:NodeListOf<Element> = tableEl.querySelectorAll('.btn-cart-plus');      
+      plusBtns.forEach((btn:Element) => {
+        btn.addEventListener("click", (event) => {
+            event.preventDefault();
+            const prodId = btn.getAttribute("data-index");
+            cart.updateItem(Number(prodId), 1);
+        });
+      });
+
+      const minusBtns:NodeListOf<Element> = tableEl.querySelectorAll('.btn-cart-minus');
+      minusBtns.forEach((btn:Element) => {
+        btn.addEventListener("click", (event) => {
+            event.preventDefault();
+            const prodId = btn.getAttribute("data-index");
+            cart.updateItem(Number(prodId), -1);
+        });
+      })
   };
   
   export default CartRender;

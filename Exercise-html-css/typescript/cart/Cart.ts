@@ -7,6 +7,7 @@ class Cart implements ICart {
     this.items = items;
     this.getCart();
   }
+  
   getCart(): void {
     const cart = JSON.parse(localStorage.getItem("cart")) || [];
     this.items = cart;
@@ -18,7 +19,14 @@ class Cart implements ICart {
       this.items.push(item);
     } else {
       cartItem.quantity += item.quantity;
+      cartItem.subTotal += item.finalPrice * item.quantity;
     }
+    this.saveCart();
+  }
+
+  updateItem(idProd: number, quantity: number): void {
+    let cartItem = this.items.find((item) => item.id === idProd);
+    cartItem != null && (cartItem.quantity += quantity);
     this.saveCart();
   }
 

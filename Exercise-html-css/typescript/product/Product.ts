@@ -16,7 +16,7 @@ class Product implements IProduct {
     this.price = price;
     this.discount = discount;
     this.status = status;
-    this.finalPrice = this.price - (this.price / 100) * this.discount;
+    this.finalPrice = this.price - (this.price / 100) * (this.discount ?? 0);
   }
 }
 
