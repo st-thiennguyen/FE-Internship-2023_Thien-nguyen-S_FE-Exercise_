@@ -40,6 +40,7 @@ const handleClickPlusCart = () => {
       const prodId = btn.getAttribute("data-index");
       const prod = carts.productsCart.find((prod) => prod.id == prodId);
       carts.addProduct(prod, 1);
+      reRenderCartUI(prodId);
     });
   });
 };
@@ -52,6 +53,7 @@ const handleClickMinusCart = () => {
       const prodId = btn.getAttribute("data-index");
       const prod = carts.productsCart.find((prod) => prod.id == prodId);
       carts.addProduct(prod, -1);
+      reRenderCartUI(prodId);
     });
   });
 };
@@ -64,18 +66,43 @@ const handleRemoveCart = () => {
       const prodId = btn.getAttribute("data-index");
       const prod = carts.productsCart.find((prod) => prod.id == prodId);
       carts.deleteProduct(prod);
+      CartRender(carts.productsCart, "shop-cart", true);
     });
   });
 };
 
-addToCartEvent();
-handleClickPlusCart();
-handleClickMinusCart();
-handleRemoveCart();
+//prettier-ignore
+const reRenderCartUI = (prodId) => {
+  //  Get cart item with prodId
+  const cartProd = carts.productsCart.find((prod) => prod.id == prodId);
+  // Get product sale price
+  const prodSalePrice = Number(cartProd.price - (cartProd.price / 100) * cartProd.discount).toFixed(2);
+  // Get total price of prod
+  const price = cartProd.discount ? prodSalePrice : cartProd.price;
+
+  // Update quantity
+  document.querySelectorAll(".cart-item-quantity").forEach((qty) => {
+    if (prodId == qty.getAttribute("data-index")) {
+      qty.innerText = cartProd.quantity;
+    }
+  });
+  // Update UI of total cart
+  let totalCart = carts.totalCart();
+  const totalEl = document.querySelector("#cart-total-price");
+  totalEl.innerText = `$${Number(totalCart).toFixed(2)}`;
+  // update UI subtitle
+  document.querySelector(`#subtotal-product-${prodId}`).innerText = `$${(cartProd.quantity * price).toFixed(2)}`;
+  
+  cartCount();
+};
 
 const cartCount = () => {
   let count = carts.countCart();
   cartCountEl.innerText = count;
 };
 
+addToCartEvent();
+handleClickPlusCart();
+handleClickMinusCart();
+handleRemoveCart();
 cartCount();

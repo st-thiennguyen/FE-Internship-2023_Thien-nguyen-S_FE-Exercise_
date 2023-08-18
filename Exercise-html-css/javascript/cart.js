@@ -40,10 +40,16 @@ class Cart {
   };
 
   totalCart = () => {
-    return this.productsCart.reduce(
-      (total, item) => (total *= Number(item.quantity) * Number(item.price)),
-      0
-    );
+    const totalCart = this.productsCart.reduce((total, item) => {
+      const salePriceProd = Number(
+        item.price - (item.price / 100) * item.discount
+      );
+      total += item.discount
+        ? Number(item.quantity * salePriceProd)
+        : Number(item.quantity * item.price);
+      return total;
+    }, 0);
+    return totalCart;
   };
 
   reset = () => {

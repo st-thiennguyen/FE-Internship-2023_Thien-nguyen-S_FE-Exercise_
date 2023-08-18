@@ -1,20 +1,22 @@
-const CartRender = (data, idElement) => {
+const CartRender = (data, idElement, reload = false) => {
   let cartTableEl = document.querySelector(`#${idElement}`);
   let cartTotal = 0;
 
-  let tableElement = `
-  <table class="cart-table" id="cart-list">
-    <tr class="table-header">
-        <th>Image</th>
-        <th>Name</th>
-        <th>Price</th>
-        <th>Quantity</th>
-        <th>Subtotal</th>
-        <th></th>
-    </tr>
-  `;
-  //prettier-ignore
-  if (cartTableEl != null) {
+  const render = () => {
+    let tableElement = `
+    <table class="cart-table" id="cart-list">
+      <tr class="table-header">
+          <th>Image</th>
+          <th>Name</th>
+          <th>Price</th>
+          <th>Quantity</th>
+          <th>Subtotal</th>
+          <th></th>
+      </tr>
+    `;
+
+    //prettier-ignore
+    if (cartTableEl != null) {
     data?.length &&
       data.forEach((product) => {
         
@@ -38,10 +40,10 @@ const CartRender = (data, idElement) => {
             <td class="product-price">$ ${price}</td>
             <td class="product-quantity">
                 <button data-index="${product.id}" class="btn-cart-minus">-</button>
-                <span class="quantity">${product.quantity}</span>
+                <span data-index="${product.id}" class="quantity cart-item-quantity">${product.quantity}</span>
                 <button data-index="${product.id}" class="btn-cart-plus">+</button>
             </td>
-            <td class="product-subtotal">$${(product.quantity * price).toFixed(2)}</td>
+            <td class="product-subtotal" id="subtotal-product-${product.id}">$${(product.quantity * price).toFixed(2)}</td>
             <td class="product-remove">
                 <button class="product-remove-link" data-index="${product.id}">
                     <i class="icon icon-small icon-trash"></i>
@@ -61,8 +63,18 @@ const CartRender = (data, idElement) => {
             </a>
         </div>`;
     }
+    cartTableEl != null && (cartTableEl.innerHTML += tableElement);
+  };
 
-  cartTableEl != null && (cartTableEl.innerHTML += tableElement);
+  const reRender = () => {
+    console.log("A");
+    cartTableEl.innerHTML = "";
+    data = data;
+  };
+
+  reload && reRender();
+
+  render();
 };
 
 export default CartRender;
