@@ -1,0 +1,17 @@
+.btn {
+  padding: 12px 18px;
+  border-radius: 50px;
+  width: fit-content;
+  height: fit-content;
+}
+
+.btn-primary {
+  background-color: map-get($color, primary);
+  color: map-get($color, white);
+}
+
+.btn-outline-primary {
+  background-color: map-get($color, white);
+  color: map-get($color, textBlack);
+  border: 1px solid map-get($color, primary);
+}

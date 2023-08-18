@@ -1,0 +1,27 @@
+.icon {
+  width: $icon-size-sm;
+  height: $icon-size-sm;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+
+.icon-cart {
+  background-image: map-get($icon, cart-24);
+}
+
+.icon-cart-sm {
+  background-image: map-get($icon, cart-16);
+}
+
+.icon-mail {
+  background-image: map-get($icon, mail-24);
+}
+
+.icon-phone {
+  background-image: map-get($icon, phone-24);
+}
+
+.icon-map {
+  background-image: map-get($icon, map-24);
+}

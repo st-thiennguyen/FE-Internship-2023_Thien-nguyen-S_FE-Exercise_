@@ -1,0 +1,10 @@
+.navbar {
+  .nav-item {
+    margin: 0 16px;
+    font-weight: map-get($font-weight, medium);
+  }
+
+  .active a {
+    color: map-get($color, primary);
+  }
+}
