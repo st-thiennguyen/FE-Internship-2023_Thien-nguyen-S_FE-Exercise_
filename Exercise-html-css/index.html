@@ -46,7 +46,7 @@
                 /></a>
               </li>
               <li class="header-cart icon-item">
-                <a class="icon-link" href=""
+                <a class="icon-link" href="cart.html"
                   ><img src="assets/images/icon-cart.svg" alt="Icon of cart" />
                   <span
                     id="cart-count"
@@ -201,7 +201,7 @@
             <h3 class="section-title">Selected just for you</h3>
             <a href="#" class="btn btn-rounded btn-mb-none-ouline">SHOW MORE</a>
           </div>
-          <div class="product-list"></div>
+          <div id="product-bestseller" class="product-list"></div>
         </div>
       </section>
       <section class="section section-services">
@@ -284,80 +284,7 @@
             <div class="recommend-header">
               <h3 class="section-title text-center">Products in today</h3>
             </div>
-            <div class="product-list">
-              <ul class="row">
-                <li class="col col-3 col-sm-6">
-                  <div class="product">
-                    <a href="#" class="product-action discounted">
-                      <div class="product-image">
-                        <img
-                          src="assets/images/product-01.png"
-                          alt="image of T-Shirt Summer Vibes product" />
-                        <span class="sale-product bagde bagde-red">-30%</span>
-                      </div>
-                      <div class="product-info">
-                        <h4 class="product-name">T-Shirt Summer Vibes</h4>
-                        <div class="product-price d-flex justify-between">
-                          <span class="product-price-sale">$89.99 </span>
-                          <span class="product-price-base">$119.99 </span>
-                        </div>
-                      </div>
-                    </a>
-                  </div>
-                </li>
-                <li class="col col-3 col-sm-6">
-                  <div class="product">
-                    <a href="#" class="product-action">
-                      <div class="product-image">
-                        <img
-                          src="assets/images/product-02.png"
-                          alt="image of Loose Knit 3/4 Sleeve product" />
-                      </div>
-                      <div class="product-info">
-                        <h4 class="product-name">Loose Knit 3/4 Sleeve</h4>
-                        <div class="product-price d-flex justify-between">
-                          <span class="product-price-base">$119.99 </span>
-                        </div>
-                      </div>
-                    </a>
-                  </div>
-                </li>
-                <li class="col col-3 col-sm-6">
-                  <div class="product">
-                    <a href="#" class="product-action">
-                      <div class="product-image">
-                        <img
-                          src="assets/images/product-03.png"
-                          alt="Image of Basic Slim Fit T-Shirt product" />
-                      </div>
-                      <div class="product-info">
-                        <h4 class="product-name">Basic Slim Fit T-Shirt</h4>
-                        <div class="product-price d-flex justify-between">
-                          <span class="product-price-base">$79.99 </span>
-                        </div>
-                      </div>
-                    </a>
-                  </div>
-                </li>
-                <li class="col col-3 col-sm-6">
-                  <div class="product">
-                    <a href="#" class="product-action">
-                      <div class="product-image">
-                        <img
-                          src="assets/images/product-04.png"
-                          alt="Image of Loose Textured T-Shirt product" />
-                      </div>
-                      <div class="product-info">
-                        <h4 class="product-name">Loose Textured T-Shirt</h4>
-                        <div class="product-price d-flex justify-between">
-                          <span class="product-price-base">$119.99 </span>
-                        </div>
-                      </div>
-                    </a>
-                  </div>
-                </li>
-              </ul>
-            </div>
+            <div id="product-recommend" class="product-list"></div>
           </div>
         </div>
       </section>
@@ -504,6 +431,6 @@
         </p>
       </div>
     </footer>
-    <script src="./javascript/index.js"></script>
+    <script type="module" src="./javascript/index.js"></script>
   </body>
 </html>

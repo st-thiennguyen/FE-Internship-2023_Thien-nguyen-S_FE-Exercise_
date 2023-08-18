@@ -25,6 +25,7 @@ $font-sizes: (
 $font-weight: (
   light: 300,
   normal: 400,
+  medium: 500,
   bold: 700,
 );
 
@@ -51,6 +52,7 @@ $icons: (
   guarantee-b: url("../../assets/images/ic-guarantee.svg"),
   quality-y: url("../../assets/images/ic-quality-hl.svg"),
   quality-b: url("../../assets/images/ic-quality.svg"),
+  trash-ouline: url("../../assets/images/ic-trash.svg"),
 );
 
 $image: (
@@ -66,3 +68,4 @@ $p-col: 10px;
 $p-col-sm: 4px;
 
 $icon-size: 40px;
+$icon-size-sm: 20px;
