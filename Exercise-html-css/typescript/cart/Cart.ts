@@ -26,21 +26,34 @@ class Cart implements ICart {
 
   updateItem(idProd: number, quantity: number): void {
     let cartItem = this.items.find((item) => item.id === idProd);
-    cartItem != null && (cartItem.quantity += quantity);
+    cartItem != null && (cartItem.quantity += quantity) && (cartItem.subTotal = cartItem.finalPrice * cartItem.quantity);
+    if (cartItem.quantity == 0) {
+      this.deleteItem(idProd)
+    }
     this.saveCart();
+  }
+
+  getSubTotalItem (cartItemId : number) : number{
+    const item = this.items.find((prod) => prod.id === cartItemId);
+    return item ? item.subTotal : 0;
   }
 
   saveCart(): void {
     localStorage.setItem("cart", JSON.stringify(this.items));
   }
 
-  deleteItem(item:CartItem): void {
-    this.items = this.items.filter((prod) => prod.id != item.id);
+  deleteItem(idProd:number): void {
+    this.items = this.items.filter((prod) => prod.id != idProd);
     this.saveCart();
   }
 
+  getQuantityItem (cartItemId : number):number {
+    const item = this.items.find((prod) => prod.id === cartItemId);
+    return item ? item.quantity : 0;
+  }
+
   getTotal(): number {
-    return this.items.reduce((total, item) => (total *= item.quantity *item.price),0);
+    return this.items.reduce((total, item) => (total += item.quantity * item.finalPrice),0);
   }
 
   cartCount(): number {
