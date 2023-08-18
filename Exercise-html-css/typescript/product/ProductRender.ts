@@ -55,4 +55,3 @@ const productListRender = (data : Product[], idElement:string) => {
 
   };
   export default productListRender;
-  
