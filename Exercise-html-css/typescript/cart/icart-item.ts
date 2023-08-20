@@ -1,4 +1,4 @@
-import IProduct from '../product/IProduct.js';
+import IProduct from '../product/iproduct.js';
 
 interface ICartItem extends Omit<IProduct, 'status'> {
   quantity: number;

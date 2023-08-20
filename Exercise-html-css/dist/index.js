@@ -1,6 +1,6 @@
-import './product/ProductIndex.js';
-import './cart/CartIndex.js';
-import { cart } from './cart/CartIndex.js';
+import './product/product-index.js';
+import './cart/cart-index.js';
+import { cart } from './cart/cart-index.js';
 window.addEventListener('scroll', () => {
     const header = document.querySelector('#header');
     const headerDesktop = document.querySelector('.header-desktop');

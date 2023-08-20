@@ -1,6 +1,6 @@
 import { RerenderUI } from '../index.js';
-import Cart from './Cart.js';
-import { cart, changeQuantity, renderCartUi } from './CartIndex.js';
+import Cart from './cart.js';
+import { cart, changeQuantity, renderCartUi } from './cart-index.js';
 
 const CartRender = (data: Cart, idElement: string) => {
   let cartTableEl = document.querySelector(`#${idElement}`);

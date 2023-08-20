@@ -1,7 +1,7 @@
-import CartItem from '../cart/CartItem.js';
-import PRODUCT_STATUS from '../utils/ProductStatus.js';
-import Product from './Product.js';
-import { handleAddtoCart } from './ProductIndex.js';
+import CartItem from '../cart/cart-item.js';
+import PRODUCT_STATUS from '../utils/product-status.js';
+import Product from './product.js';
+import { handleAddtoCart } from './product-index.js';
 
 const productListRender = (data: Product[], idElement: string) => {
   // find root element

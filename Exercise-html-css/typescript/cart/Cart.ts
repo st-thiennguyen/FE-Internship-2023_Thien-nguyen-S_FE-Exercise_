@@ -1,5 +1,6 @@
-import CartItem from './CartItem.js';
-import ICart from './ICart.js';
+import { GLOBAL_KEY } from '../utils/global-key.js';
+import CartItem from './cart-item.js';
+import ICart from './icart.js';
 
 class Cart implements ICart {
   items: CartItem[];
@@ -9,7 +10,7 @@ class Cart implements ICart {
   }
 
   getCart(): void {
-    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const cart = JSON.parse(localStorage.getItem(GLOBAL_KEY.CART)) || [];
     this.items = cart;
   }
 
@@ -42,7 +43,7 @@ class Cart implements ICart {
   }
 
   saveCart(): void {
-    localStorage.setItem('cart', JSON.stringify(this.items));
+    localStorage.setItem(GLOBAL_KEY.CART, JSON.stringify(this.items));
   }
 
   deleteItem(idProd: number): void {

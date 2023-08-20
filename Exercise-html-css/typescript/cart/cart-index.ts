@@ -1,6 +1,6 @@
 import { RerenderUI } from '../index.js';
-import Cart from './Cart.js';
-import CartRender from './CartRender.js';
+import Cart from './cart.js';
+import CartRender from './cart-render.js';
 
 export let cart: Cart = new Cart([]);
 

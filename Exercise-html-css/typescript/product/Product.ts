@@ -1,5 +1,5 @@
-import IProduct from './IProduct.js';
-import PRODUCT_STATUS from '../utils/ProductStatus.js';
+import IProduct from './iproduct.js';
+import PRODUCT_STATUS from '../utils/product-status.js';
 
 class Product implements IProduct {
   id: number;

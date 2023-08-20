@@ -1,6 +1,6 @@
-import CartItem from '../cart/CartItem.js';
-import PRODUCT_STATUS from '../utils/ProductStatus.js';
-import { handleAddtoCart } from './ProductIndex.js';
+import CartItem from '../cart/cart-item.js';
+import PRODUCT_STATUS from '../utils/product-status.js';
+import { handleAddtoCart } from './product-index.js';
 const productListRender = (data, idElement) => {
     let productBox = document.querySelector(`#${idElement}`);
     let productListEl = document.createElement('ul');

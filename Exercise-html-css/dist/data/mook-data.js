@@ -1,4 +1,4 @@
-import PRODUCT_STATUS from '../utils/ProductStatus.js';
+import PRODUCT_STATUS from '../utils/product-status.js';
 const data = [
     {
         id: 1,

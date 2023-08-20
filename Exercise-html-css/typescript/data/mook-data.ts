@@ -1,5 +1,5 @@
-import IProduct from '../product/IProduct';
-import PRODUCT_STATUS from '../utils/ProductStatus.js';
+import IProduct from '../product/iproduct';
+import PRODUCT_STATUS from '../utils/product-status.js';
 const data: IProduct[] = [
   {
     id: 1,

@@ -4,7 +4,7 @@ class Cart {
         this.getCart();
     }
     getCart() {
-        const cart = JSON.parse(localStorage.getItem('cart')) || [];
+        const cart = JSON.parse(localStorage.getItem("cart")) || [];
         this.items = cart;
     }
     addItem(item) {
@@ -34,7 +34,7 @@ class Cart {
         return item ? item.subTotal : 0;
     }
     saveCart() {
-        localStorage.setItem('cart', JSON.stringify(this.items));
+        localStorage.setItem("cart", JSON.stringify(this.items));
     }
     deleteItem(idProd) {
         this.items = this.items.filter((prod) => prod.id != idProd);
