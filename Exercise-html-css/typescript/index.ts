@@ -1,16 +1,16 @@
-import "./product/ProductIndex.js";
-import "./cart/CartIndex.js";
-import { cart } from "./cart/CartIndex.js";
+import './product/ProductIndex.js';
+import './cart/CartIndex.js';
+import { cart } from './cart/CartIndex.js';
 
-window.addEventListener("scroll", () => {
-  const header = document.querySelector<HTMLElement>("#header");
-  const headerDesktop = document.querySelector<HTMLElement>(".header-desktop");
-  const cartPage = document.querySelector("#section-cart");
+window.addEventListener('scroll', () => {
+  const header = document.querySelector<HTMLElement>('#header');
+  const headerDesktop = document.querySelector<HTMLElement>('.header-desktop');
+  const cartPage = document.querySelector('#section-cart');
   if (window.scrollY > 100) {
-    header.style.backgroundColor = "#333";
-    headerDesktop.style.marginTop = "30px";
+    header.style.backgroundColor = '#333';
+    headerDesktop.style.marginTop = '30px';
   } else {
-    !cartPage && (header.style.backgroundColor = "transparent");
+    !cartPage && (header.style.backgroundColor = 'transparent');
   }
 });
 
@@ -21,5 +21,5 @@ export const RerenderUI = (element: string, value: any) => {
   }
 };
 
-RerenderUI("#cart-count", `${cart.cartCount()}`);
-RerenderUI("#cart-total-price", `$${cart.getTotal().toFixed(2)}`);
+RerenderUI('#cart-count', `${cart.cartCount()}`);
+RerenderUI('#cart-total-price', `$${cart.getTotal().toFixed(2)}`);

@@ -1,5 +1,5 @@
-import CartItem from "./CartItem.js";
-import ICart from "./ICart.js";
+import CartItem from './CartItem.js';
+import ICart from './ICart.js';
 
 class Cart implements ICart {
   items: CartItem[];
@@ -9,7 +9,7 @@ class Cart implements ICart {
   }
 
   getCart(): void {
-    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
     this.items = cart;
   }
 
@@ -42,7 +42,7 @@ class Cart implements ICart {
   }
 
   saveCart(): void {
-    localStorage.setItem("cart", JSON.stringify(this.items));
+    localStorage.setItem('cart', JSON.stringify(this.items));
   }
 
   deleteItem(idProd: number): void {

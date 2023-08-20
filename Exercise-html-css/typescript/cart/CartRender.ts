@@ -1,12 +1,12 @@
-import { RerenderUI } from "../index.js";
-import Cart from "./Cart.js";
-import { cart, changeQuantity, renderCartUi } from "./CartIndex.js";
+import { RerenderUI } from '../index.js';
+import Cart from './Cart.js';
+import { cart, changeQuantity, renderCartUi } from './CartIndex.js';
 
 const CartRender = (data: Cart, idElement: string) => {
   let cartTableEl = document.querySelector(`#${idElement}`);
-  let tableEl = document.createElement("table");
-  tableEl.className = "cart-table";
-  tableEl.id = "cart-list";
+  let tableEl = document.createElement('table');
+  tableEl.className = 'cart-table';
+  tableEl.id = 'cart-list';
 
   tableEl.innerHTML = `
       <tr class="table-header">
@@ -77,30 +77,30 @@ const CartRender = (data: Cart, idElement: string) => {
         
       }
 
-  const plusBtns: NodeListOf<Element> = document.querySelectorAll(".btn-cart-plus");
+  const plusBtns: NodeListOf<Element> = document.querySelectorAll('.btn-cart-plus');
   plusBtns.forEach((btn: Element) => {
-    btn.addEventListener("click", (event) => {
+    btn.addEventListener('click', (event) => {
       event.preventDefault();
       changeQuantity(btn, 1);
     });
   });
 
-  const minusBtns: NodeListOf<Element> = document.querySelectorAll(".btn-cart-minus");
+  const minusBtns: NodeListOf<Element> = document.querySelectorAll('.btn-cart-minus');
   minusBtns.forEach((btn: Element) => {
-    btn.addEventListener("click", (event) => {
+    btn.addEventListener('click', (event) => {
       event.preventDefault();
       changeQuantity(btn, -1);
     });
   });
 
-  const removeBtns: NodeListOf<Element> = document.querySelectorAll(".product-remove-link");
+  const removeBtns: NodeListOf<Element> = document.querySelectorAll('.product-remove-link');
   removeBtns.forEach((btn: Element) => {
-    btn.addEventListener("click", (event) => {
+    btn.addEventListener('click', (event) => {
       event.preventDefault();
-      const prodId = Number(btn.getAttribute("data-index"));
+      const prodId = Number(btn.getAttribute('data-index'));
       cart.deleteItem(prodId);
-      RerenderUI("#cart-count", cart.cartCount());
-      RerenderUI("#cart-total-price", `$${cart.getTotal().toFixed(2)}`);
+      RerenderUI('#cart-count', cart.cartCount());
+      RerenderUI('#cart-total-price', `$${cart.getTotal().toFixed(2)}`);
       renderCartUi();
     });
   });

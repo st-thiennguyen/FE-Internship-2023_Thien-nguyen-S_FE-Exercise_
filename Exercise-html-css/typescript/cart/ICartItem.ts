@@ -1,6 +1,6 @@
-import IProduct from "../product/IProduct.js";
+import IProduct from '../product/IProduct.js';
 
-interface ICartItem extends Omit<IProduct, "status"> {
+interface ICartItem extends Omit<IProduct, 'status'> {
   quantity: number;
   subTotal: number;
   finalPrice: number;

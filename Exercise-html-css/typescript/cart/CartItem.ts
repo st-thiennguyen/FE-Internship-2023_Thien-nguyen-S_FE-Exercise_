@@ -1,5 +1,5 @@
-import Product from "../product/Product.js";
-import ICartItem from "./ICartItem.js";
+import Product from '../product/Product.js';
+import ICartItem from './ICartItem.js';
 
 class CartItem implements ICartItem {
   subTotal: number;

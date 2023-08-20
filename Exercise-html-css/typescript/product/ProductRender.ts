@@ -1,14 +1,14 @@
-import CartItem from "../cart/CartItem.js";
-import PRODUCT_STATUS from "../utils/ProductStatus.js";
-import Product from "./Product.js";
-import { handleAddtoCart } from "./ProductIndex.js";
+import CartItem from '../cart/CartItem.js';
+import PRODUCT_STATUS from '../utils/ProductStatus.js';
+import Product from './Product.js';
+import { handleAddtoCart } from './ProductIndex.js';
 
 const productListRender = (data: Product[], idElement: string) => {
   // find root element
   let productBox = document.querySelector(`#${idElement}`);
   // Create product list ul
-  let productListEl = document.createElement("ul");
-  productListEl.className = "row";
+  let productListEl = document.createElement('ul');
+  productListEl.className = 'row';
   //prettier-ignore
   if (productBox != null) {
     {

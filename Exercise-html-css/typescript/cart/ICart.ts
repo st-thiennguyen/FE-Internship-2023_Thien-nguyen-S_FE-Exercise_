@@ -1,4 +1,4 @@
-import CartItem from "./CartItem.js";
+import CartItem from './CartItem.js';
 
 interface ICart {
   items: CartItem[];
