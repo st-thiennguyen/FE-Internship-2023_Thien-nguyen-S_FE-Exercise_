@@ -1,4 +1,4 @@
-import { GLOBAL_KEY } from '../utils/global-key.js';
+import { GLOBAL_KEY } from '../utils/env.js';
 import CartItem from './cart-item.js';
 import ICart from './icart.js';
 
