@@ -1,10 +1,10 @@
-import CartItem from "../cart/CartItem.js";
-import PRODUCT_STATUS from "../utils/ProductStatus.js";
-import { handleAddtoCart } from "./ProductIndex.js";
+import CartItem from '../cart/CartItem.js';
+import PRODUCT_STATUS from '../utils/ProductStatus.js';
+import { handleAddtoCart } from './ProductIndex.js';
 const productListRender = (data, idElement) => {
     let productBox = document.querySelector(`#${idElement}`);
-    let productListEl = document.createElement("ul");
-    productListEl.className = "row";
+    let productListEl = document.createElement('ul');
+    productListEl.className = 'row';
     if (productBox != null) {
         {
             (data === null || data === void 0 ? void 0 : data.length) &&
