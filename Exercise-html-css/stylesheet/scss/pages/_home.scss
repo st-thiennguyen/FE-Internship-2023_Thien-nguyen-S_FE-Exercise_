@@ -136,6 +136,11 @@
       opacity: 0;
       transition: all 1s ease;
     }
+    .disabled {
+      background-color: map-get($color, greyDark);
+      color: map-get($color, white);
+      cursor: default;
+    }
   }
   &:hover &-cart {
     background-color: rgba($color: #000000, $alpha: 0.5);
@@ -150,6 +155,9 @@
   }
   .sale-product {
     @include position(24px, null, null, 18px, absolute);
+  }
+  .product-status {
+    @include position(24px, 18px, null, null, absolute);
   }
   &-price {
     font-size: map-get($font-sizes, xl);

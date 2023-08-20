@@ -65,10 +65,21 @@
           border-radius: 25px;
           outline: none;
           border: none;
+          cursor: pointer;
         }
         .quantity {
           margin: 0 10px;
         }
+      }
+    }
+  }
+
+  .cart-total {
+    .total-price {
+      margin-right: 20px;
+      .price {
+        font-size: map-get($font-sizes, xxl);
+        font-weight: map-get($font-weight, medium);
       }
     }
   }

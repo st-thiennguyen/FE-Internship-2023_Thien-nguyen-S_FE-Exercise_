@@ -7,14 +7,14 @@ class Cart implements ICart {
     this.items = items;
     this.getCart();
   }
-  
+
   getCart(): void {
     const cart = JSON.parse(localStorage.getItem("cart")) || [];
     this.items = cart;
   }
 
   addItem(item: CartItem): void {
-    const cartItem = this.items.find((prod) => prod.id === item.id);    
+    const cartItem = this.items.find((prod) => prod.id === item.id);
     if (!cartItem) {
       this.items.push(item);
     } else {
@@ -26,14 +26,17 @@ class Cart implements ICart {
 
   updateItem(idProd: number, quantity: number): void {
     let cartItem = this.items.find((item) => item.id === idProd);
-    cartItem != null && (cartItem.quantity += quantity) && (cartItem.subTotal = cartItem.finalPrice * cartItem.quantity);
-    if (cartItem.quantity == 0) {
-      this.deleteItem(idProd)
+    if (cartItem !== null) {
+      cartItem.quantity += quantity;
+      cartItem.subTotal = cartItem.finalPrice * cartItem.quantity;
+    }
+    if (cartItem.quantity === 0) {
+      this.deleteItem(idProd);
     }
     this.saveCart();
   }
 
-  getSubTotalItem (cartItemId : number) : number{
+  getSubTotalItem(cartItemId: number): number {
     const item = this.items.find((prod) => prod.id === cartItemId);
     return item ? item.subTotal : 0;
   }
@@ -42,22 +45,22 @@ class Cart implements ICart {
     localStorage.setItem("cart", JSON.stringify(this.items));
   }
 
-  deleteItem(idProd:number): void {
+  deleteItem(idProd: number): void {
     this.items = this.items.filter((prod) => prod.id != idProd);
     this.saveCart();
   }
 
-  getQuantityItem (cartItemId : number):number {
+  getQuantityItem(cartItemId: number): number {
     const item = this.items.find((prod) => prod.id === cartItemId);
     return item ? item.quantity : 0;
   }
 
   getTotal(): number {
-    return this.items.reduce((total, item) => (total += item.quantity * item.finalPrice),0);
+    return this.items.reduce((total, item) => (total += item.quantity * item.finalPrice), 0);
   }
 
   cartCount(): number {
-    return this.items.reduce((total, item) => (total += item.quantity),0);
+    return this.items.reduce((total, item) => (total += item.quantity), 0);
   }
 }
 

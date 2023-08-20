@@ -1,20 +1,15 @@
 import CartItem from "../cart/CartItem.js";
 import PRODUCT_STATUS from "../utils/ProductStatus.js";
-import Product from "./Product.js";
 import { handleAddtoCart } from "./ProductIndex.js";
-
-const productListRender = (data: Product[], idElement: string) => {
-  // find root element
-  let productBox = document.querySelector(`#${idElement}`);
-  // Create product list ul
-  let productListEl = document.createElement("ul");
-  productListEl.className = "row";
-  //prettier-ignore
-  if (productBox != null) {
-    {
-       data?.length &&
-        data.forEach((product : Product) => {
-          productListEl.innerHTML += `
+const productListRender = (data, idElement) => {
+    let productBox = document.querySelector(`#${idElement}`);
+    let productListEl = document.createElement("ul");
+    productListEl.className = "row";
+    if (productBox != null) {
+        {
+            (data === null || data === void 0 ? void 0 : data.length) &&
+                data.forEach((product) => {
+                    productListEl.innerHTML += `
           <li class="col col-3 col-sm-6">
               <div class="product">
                   <a class="product-action ${product.discount ? 'discounted' : ''}" href="#">
@@ -34,26 +29,23 @@ const productListRender = (data: Product[], idElement: string) => {
                   </a>
               </div>
           </li>`;
-        });
-
-        const cartButtons: NodeListOf<Element> =
-          productListEl.querySelectorAll(".btn-cart-add");
-        cartButtons.forEach((btn: HTMLButtonElement) => {
-          const idProd = Number(btn.getAttribute("data-index"));
-          const product = data.find((prod) => prod.id === idProd);
-          if (product.status === PRODUCT_STATUS.OUT_OF_STOCK) {
-            btn.disabled = true;
-            btn.classList.add("disabled");
-          }
-          btn.addEventListener("click", (event) => {
-            event.preventDefault();
-            const cartItem = new CartItem(product, 1);
-            handleAddtoCart(cartItem);
-          });
-        });
+                });
+            const cartButtons = productListEl.querySelectorAll(".btn-cart-add");
+            cartButtons.forEach((btn) => {
+                const idProd = Number(btn.getAttribute("data-index"));
+                const product = data.find((prod) => prod.id === idProd);
+                if (product.status === PRODUCT_STATUS.OUT_OF_STOCK) {
+                    btn.disabled = true;
+                    btn.classList.add("disabled");
+                }
+                btn.addEventListener("click", (event) => {
+                    event.preventDefault();
+                    const cartItem = new CartItem(product, 1);
+                    handleAddtoCart(cartItem);
+                });
+            });
+        }
+        productBox.appendChild(productListEl);
     }
-  
-    productBox.appendChild(productListEl);
-  }
 };
 export default productListRender;

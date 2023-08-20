@@ -8,7 +8,7 @@ class Product implements IProduct {
   price: number;
   discount: number;
   status: PRODUCT_STATUS;
-  finalPrice : number
+  finalPrice: number;
   constructor({ id, name, image, price, discount, status }: Product) {
     this.id = id;
     this.name = name;

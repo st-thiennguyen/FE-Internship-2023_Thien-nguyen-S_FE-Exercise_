@@ -2,25 +2,24 @@ import "./product/ProductIndex.js";
 import "./cart/CartIndex.js";
 import { cart } from "./cart/CartIndex.js";
 
-const cartCountEl: Element = document.querySelector("#cart-count");
-const cartSize = cart.cartCount();
-cartCountEl.textContent = `${cartSize}`;
-
-window.addEventListener('scroll', () => {
+window.addEventListener("scroll", () => {
+  const header = document.querySelector<HTMLElement>("#header");
+  const headerDesktop = document.querySelector<HTMLElement>(".header-desktop");
+  const cartPage = document.querySelector("#section-cart");
   if (window.scrollY > 100) {
-    document.querySelector<HTMLElement>('#header').style.backgroundColor = "#333";
-    document.querySelector<HTMLElement>('.header-desktop').style.marginTop = "30px";
-    
-  }else{
-    document.querySelector<HTMLElement>('#header').style.backgroundColor = 'transparent';
+    header.style.backgroundColor = "#333";
+    headerDesktop.style.marginTop = "30px";
+  } else {
+    !cartPage && (header.style.backgroundColor = "transparent");
   }
-  const cartPage = document.querySelector('#section-cart');
-  cartPage && (document.querySelector<HTMLElement>('#header').style.backgroundColor = "#333");
 });
 
 export const RerenderUI = (element: string, value: any) => {
   const box = document.querySelector(element);
-  box && (box.textContent = value);
+  if (box) {
+    box.textContent = value;
+  }
 };
 
-RerenderUI('#cart-total-price', `$${cart.getTotal().toFixed(2)}`);
+RerenderUI("#cart-count", `${cart.cartCount()}`);
+RerenderUI("#cart-total-price", `$${cart.getTotal().toFixed(2)}`);

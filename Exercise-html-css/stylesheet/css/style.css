@@ -80,6 +80,11 @@ body {
   color: #fff;
 }
 
+.bagde-grey {
+  background: #333;
+  color: #fff;
+}
+
 @media screen and (max-width: 768px) {
   .bagde {
     font-size: 8px;
@@ -356,7 +361,7 @@ body {
   top: 0;
   left: 0;
   right: 0;
-  position: absolute;
+  position: fixed;
   z-index: 9;
 }
 #header .header-desktop {
@@ -621,6 +626,11 @@ body {
   opacity: 0;
   transition: all 1s ease;
 }
+.product-cart .disabled {
+  background-color: #c4c4c4;
+  color: #fff;
+  cursor: default;
+}
 .product:hover .product-cart {
   background-color: rgba(0, 0, 0, 0.5);
 }
@@ -635,6 +645,11 @@ body {
 .product .sale-product {
   top: 24px;
   left: 18px;
+  position: absolute;
+}
+.product .product-status {
+  top: 24px;
+  right: 18px;
   position: absolute;
 }
 .product-price {
@@ -858,9 +873,17 @@ body {
   border-radius: 25px;
   outline: none;
   border: none;
+  cursor: pointer;
 }
 .section-cart .cart-table .cart-item .product-quantity .quantity {
   margin: 0 10px;
+}
+.section-cart .cart-total .total-price {
+  margin-right: 20px;
+}
+.section-cart .cart-total .total-price .price {
+  font-size: 24px;
+  font-weight: 500;
 }
 
 /*# sourceMappingURL=style.css.map */

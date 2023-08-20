@@ -1,7 +1,7 @@
 /* HEADER */
 
 #header {
-  @include position(0, 0, null, 0, absolute);
+  @include position(0, 0, null, 0, fixed);
   z-index: 9;
   .header-desktop {
     margin-top: 48px;

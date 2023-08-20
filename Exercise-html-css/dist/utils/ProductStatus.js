@@ -1,0 +1,6 @@
+var PRODUCT_STATUS;
+(function (PRODUCT_STATUS) {
+    PRODUCT_STATUS["AVAILABLE"] = "Available";
+    PRODUCT_STATUS["OUT_OF_STOCK"] = "Out of Stock";
+})(PRODUCT_STATUS || (PRODUCT_STATUS = {}));
+export default PRODUCT_STATUS;

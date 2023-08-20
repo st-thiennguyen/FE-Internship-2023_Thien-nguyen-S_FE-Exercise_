@@ -1,14 +1,12 @@
 import { RerenderUI } from "../index.js";
-import Cart from "./Cart.js";
 import { cart, changeQuantity, renderCartUi } from "./CartIndex.js";
-
-const CartRender = (data: Cart, idElement: string) => {
-  let cartTableEl = document.querySelector(`#${idElement}`);
-  let tableEl = document.createElement("table");
-  tableEl.className = "cart-table";
-  tableEl.id = "cart-list";
-
-  tableEl.innerHTML = `
+const CartRender = (data, idElement) => {
+    var _a;
+    let cartTableEl = document.querySelector(`#${idElement}`);
+    let tableEl = document.createElement("table");
+    tableEl.className = "cart-table";
+    tableEl.id = "cart-list";
+    tableEl.innerHTML = `
       <tr class="table-header">
           <th>Image</th>
           <th>Name</th>
@@ -18,12 +16,11 @@ const CartRender = (data: Cart, idElement: string) => {
           <th></th>
       </tr>
     `;
-  //prettier-ignore
-  if (cartTableEl != null) {
-      data.items?.length &&
-        data.items.forEach((cartItem) => {
-          tableEl.innerHTML += 
-          `<tr class="cart-item">
+    if (cartTableEl != null) {
+        ((_a = data.items) === null || _a === void 0 ? void 0 : _a.length) &&
+            data.items.forEach((cartItem) => {
+                tableEl.innerHTML +=
+                    `<tr class="cart-item">
               <td class="product-image">
                   <a href="" class="product-link">
                   <div class="product-img d-inline-flex">
@@ -49,15 +46,15 @@ const CartRender = (data: Cart, idElement: string) => {
                   </button>
               </td>
           </tr>`;
-        });
-
+            });
         const table = document.querySelector('#cart-list');
         if (table) {
-          cartTableEl.replaceChild(tableEl, table);
-        } else {
-          cartTableEl.appendChild(tableEl);
-          cartTableEl.innerHTML += 
-        `
+            cartTableEl.replaceChild(tableEl, table);
+        }
+        else {
+            cartTableEl.appendChild(tableEl);
+            cartTableEl.innerHTML +=
+                `
           <div class="cart-total d-flex justify-between item-center">
             <a href="index.html" class="btn btn-primary">
                 Back to home
@@ -71,39 +68,32 @@ const CartRender = (data: Cart, idElement: string) => {
               </a>
             </div>
           </div>`;
-
-          
         }
-        
-      }
-
-  const plusBtns: NodeListOf<Element> = document.querySelectorAll(".btn-cart-plus");
-  plusBtns.forEach((btn: Element) => {
-    btn.addEventListener("click", (event) => {
-      event.preventDefault();
-      changeQuantity(btn, 1);
+    }
+    const plusBtns = document.querySelectorAll(".btn-cart-plus");
+    plusBtns.forEach((btn) => {
+        btn.addEventListener("click", (event) => {
+            event.preventDefault();
+            changeQuantity(btn, 1);
+        });
     });
-  });
-
-  const minusBtns: NodeListOf<Element> = document.querySelectorAll(".btn-cart-minus");
-  minusBtns.forEach((btn: Element) => {
-    btn.addEventListener("click", (event) => {
-      event.preventDefault();
-      changeQuantity(btn, -1);
+    const minusBtns = document.querySelectorAll(".btn-cart-minus");
+    minusBtns.forEach((btn) => {
+        btn.addEventListener("click", (event) => {
+            event.preventDefault();
+            changeQuantity(btn, -1);
+        });
     });
-  });
-
-  const removeBtns: NodeListOf<Element> = document.querySelectorAll(".product-remove-link");
-  removeBtns.forEach((btn: Element) => {
-    btn.addEventListener("click", (event) => {
-      event.preventDefault();
-      const prodId = Number(btn.getAttribute("data-index"));
-      cart.deleteItem(prodId);
-      RerenderUI("#cart-count", cart.cartCount());
-      RerenderUI("#cart-total-price", `$${cart.getTotal().toFixed(2)}`);
-      renderCartUi();
+    const removeBtns = document.querySelectorAll(".product-remove-link");
+    removeBtns.forEach((btn) => {
+        btn.addEventListener("click", (event) => {
+            event.preventDefault();
+            const prodId = Number(btn.getAttribute("data-index"));
+            cart.deleteItem(prodId);
+            RerenderUI("#cart-count", cart.cartCount());
+            RerenderUI("#cart-total-price", `$${cart.getTotal().toFixed(2)}`);
+            renderCartUi();
+        });
     });
-  });
 };
-
 export default CartRender;
