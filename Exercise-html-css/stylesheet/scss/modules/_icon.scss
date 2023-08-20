@@ -4,6 +4,10 @@
   height: $icon-size;
   background-repeat: no-repeat;
   background-position: center;
+  &-small {
+    width: $icon-size-sm;
+    height: $icon-size-sm;
+  }
   &-search {
     background-image: map-get($icons, search-b);
   }
@@ -46,6 +50,9 @@
 
   &-quality-service {
     background-image: map-get($icons, quality-b);
+  }
+  &-trash {
+    background-image: map-get($icons, trash-ouline);
   }
 }
 
