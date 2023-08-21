@@ -1,0 +1,54 @@
+.icon {
+  width: 15px;
+  height: 15px;
+  display: inline-block;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  &-medium {
+    width: 20px;
+    height: 20px;
+  }
+
+  &-large {
+    width: 24px;
+    height: 24px;
+  }
+
+  &-blog-menu {
+    background-image: url('../../assets/images/ic-more.svg');
+  }
+
+  &-like {
+    background-image: url('../../assets/images/ic-like.svg');
+  }
+
+  &-comment {
+    background-image: url('../../assets/images/ic-comment.svg');
+  }
+  &-facebook {
+    background-image: url('../../assets/images/ic-facebook-yl.svg');
+  }
+
+  &-instagram {
+    background-image: url('../../assets/images/ic-instagram-yl.svg');
+  }
+
+  &-youtube {
+    background-image: url('../../assets/images/ic-youtube-yl.svg');
+  }
+
+  &-twitter {
+    background-image: url('../../assets/images/ic-twitter-yl.svg');
+  }
+
+  &-facebook-fill {
+    background-image: url('../../assets/images/ic-facebook-fill.svg');
+  }
+  &-twitter-fill {
+    background-image: url('../../assets/images/ic-twitter-fill.svg');
+  }
+  &-linkedin-fill {
+    background-image: url('../../assets/images/ic-linkedin-fill.svg');
+  }
+}

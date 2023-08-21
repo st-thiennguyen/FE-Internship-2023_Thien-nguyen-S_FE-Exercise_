@@ -1,0 +1,17 @@
+.tag {
+  padding: 2px 8px;
+  border-radius: 50px;
+  background-color: #f2f2f2;
+  width: min-content;
+  font-size: 12px;
+  &:hover {
+    background-color: map-get($color, primary);
+    &.tag a {
+      color: map-get($color, white);
+    }
+  }
+}
+
+.tag a {
+  color: #485963;
+}

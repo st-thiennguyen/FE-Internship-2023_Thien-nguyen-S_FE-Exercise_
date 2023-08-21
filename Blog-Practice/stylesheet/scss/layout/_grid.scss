@@ -1,0 +1,64 @@
+.container {
+  width: 1220px;
+  margin: 0 auto;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.gap-2 {
+  gap: 8px;
+}
+
+.gap-3 {
+  gap: 12px;
+}
+
+.gap-4-2 {
+  gap: 16px 8px;
+}
+
+.gap-8 {
+  gap: 32px;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-end {
+  justify-content: end;
+}
+
+.item-center {
+  align-items: center;
+}
+
+.item-end {
+  align-items: end;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -65px;
+}
+
+.col {
+  padding: 0 65px;
+}
+
+@for $i from 1 through 12 {
+  .col-#{$i} {
+    width: percentage(calc($i / 12));
+  }
+}

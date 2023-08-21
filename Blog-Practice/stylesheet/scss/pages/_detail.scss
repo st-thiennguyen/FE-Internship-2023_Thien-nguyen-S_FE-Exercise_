@@ -1,0 +1,66 @@
+.section-detail {
+  .container {
+    max-width: 740px;
+  }
+}
+
+.section-banner-detail {
+  height: 612px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url('../../assets/images/detail-banner.png');
+}
+
+.detail-wrapper {
+  background: linear-gradient(360deg, #000 0%, rgba(0, 0, 0, 0) 100%);
+  height: 100%;
+}
+
+.banner-detail {
+  padding-bottom: 50px;
+}
+
+.banner-detail-title {
+  color: map-get($color, white);
+  font-size: 50px;
+  font-weight: map-get($font-weight, semibold);
+}
+
+.share-title {
+  margin-right: 14px;
+}
+.banner-share {
+  color: map-get($color, white);
+  i {
+    border-radius: 100%;
+  }
+}
+
+.author-img {
+  margin-right: 13px;
+}
+
+.author-name {
+  color: map-get($color, white);
+  font-size: 14px;
+  font-weight: map-get($font-weight, medium);
+}
+
+.author-more {
+  color: map-get($color, white);
+  font-size: 14px;
+}
+
+.author-info {
+  color: map-get($color, white);
+}
+
+.section-recommend {
+  padding: 80px 0 100px 0;
+  background-color: #042342;
+  .recommend-title {
+    color: map-get($color, white);
+    font-size: 32px;
+    font-weight: map-get($font-weight, semibold);
+  }
+}

@@ -1,0 +1,10 @@
+.btn {
+  padding: 12px 18px;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.btn-default {
+  background-color: map-get($color, textBlack);
+  color: map-get($color, white);
+}
